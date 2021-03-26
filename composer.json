@@ -1,0 +1,38 @@
+{
+  "name": "miaoxing/page",
+  "type": "miaoxing-plugin",
+  "description": "",
+  "keywords": [
+    "miaoxing",
+    "page"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/app": "^0.2.13"
+  },
+  "require-dev": {
+    "miaoxing/dev": "^6.3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Page\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Page\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-types": [
+      "miaoxing-plugin"
+    ],
+    "installer-paths": {
+      "plugins/{$name}/": [
+        "type:miaoxing-plugin"
+      ]
+    }
+  }
+}

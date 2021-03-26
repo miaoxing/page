@@ -8,7 +8,7 @@ import {Tag} from 'antd';
 const types = {
   1: <Tag color="blue">独立页面</Tag>,
   2: <Tag color="orange">首页</Tag>,
-}
+};
 
 const Index = () => {
   const [table] = useTable();

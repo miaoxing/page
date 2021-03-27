@@ -21,3 +21,54 @@ exports[`admin/pages index 1`] = `
   ],
 }
 `;
+
+exports[`admin/pages set index 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/pages?page=1&limit=20",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "id": 1,
+        },
+        "method": "put",
+        "url": "/admin-api/pages/index",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/pages?page=1&limit=20",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;

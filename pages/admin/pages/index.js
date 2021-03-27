@@ -5,6 +5,7 @@ import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
 import {Tag} from 'antd';
 import api from '@mxjs/api';
+import $ from 'miaoxing';
 
 const types = {
   1: <Tag color="blue">独立页面</Tag>,

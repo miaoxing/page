@@ -1,8 +1,8 @@
 import Index from './index';
-import {render} from '@testing-library/react';
+import {fireEvent, render, waitForElementToBeRemoved} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
 import React from 'react';
-import $ from 'miaoxing';
+import $, {Ret} from 'miaoxing';
 import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
 import {app} from '@mxjs/app';
 
@@ -29,8 +29,8 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取列表数据
-      .mockImplementationOnce(() => promise.resolve({
-        code: 1,
+      .mockImplementationOnce(() => promise.resolve(Ret.new({
+        code: 0,
         data: [
           {
             id: 1,
@@ -39,7 +39,7 @@ describe(path, () => {
             updatedAt: '2020-01-01 00:00:00',
           },
         ],
-      }));
+      })));
 
     const {findByText} = render(<MemoryRouter>
       <Index/>
@@ -51,6 +51,56 @@ describe(path, () => {
 
     await Promise.all([promise]);
     expect($.http).toHaveBeenCalledTimes(1);
+    expect($.http).toMatchSnapshot();
+  });
+
+  test('set index', async () => {
+    const promise = createPromise();
+    const promise2 = createPromise();
+    const promise3 = createPromise();
+
+    $.http = jest.fn()
+      // 读取列表数据
+      .mockImplementationOnce(() => promise.resolve(Ret.new({
+        code: 0,
+        data: [
+          {
+            id: 1,
+            name: '测试页面',
+            type: 1,
+            updatedAt: '2020-01-01 00:00:00',
+          },
+        ],
+      })))
+      .mockImplementationOnce(() => promise2.resolve(Ret.new({
+        code: 0
+      })))
+      .mockImplementationOnce(() => promise3.resolve(Ret.new({
+        code: 0,
+        data: [
+          {
+            id: 1,
+            name: '测试页面',
+            type: 2,
+            updatedAt: '2020-01-01 00:00:00',
+          },
+        ],
+      })))
+
+    const result = render(<MemoryRouter>
+      <Index/>
+    </MemoryRouter>);
+
+    const link = await result.findByText('设为首页');
+
+    await Promise.all([promise]);
+
+    fireEvent.click(link);
+    await waitForElementToBeRemoved(() => result.queryByText('设为首页'))
+
+    await Promise.all([promise2, promise3]);
+
+    expect($.http).toHaveBeenCalledTimes(3);
     expect($.http).toMatchSnapshot();
   });
 });

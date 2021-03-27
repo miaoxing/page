@@ -14,4 +14,8 @@ class PageModel extends BaseModel
     use PageTrait;
     use ReqQueryTrait;
     use SoftDeleteTrait;
+
+    public const TYPE_STANDALONE = 1;
+
+    public const TYPE_INDEX = 2;
 }

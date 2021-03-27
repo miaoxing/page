@@ -1910,6 +1910,47 @@ class PageModel
     public static function isRelation(string $method): bool
     {
     }
+
+    /**
+     * Really remove the record from database
+     *
+     * @param int|string $id
+     * @return $this
+     * @see PageModel::reallyDestroy
+     */
+    public static function reallyDestroy($id = null): self
+    {
+    }
+
+    /**
+     * Add a query to filter soft deleted records
+     *
+     * @return $this
+     * @see PageModel::withoutDeleted
+     */
+    public static function withoutDeleted(): self
+    {
+    }
+
+    /**
+     * Add a query to return only deleted records
+     *
+     * @return $this
+     * @see PageModel::onlyDeleted
+     */
+    public static function onlyDeleted(): self
+    {
+    }
+
+    /**
+     * Remove "withoutDeleted" in the query, expect to return all records
+     *
+     * @return $this
+     * @see PageModel::withDeleted
+     */
+    public static function withDeleted(): self
+    {
+    }
 }
 
 namespace Miaoxing\Page\Service;
@@ -3797,6 +3838,47 @@ class PageModel
      * @see PageModel::isRelation
      */
     public function isRelation(string $method): bool
+    {
+    }
+
+    /**
+     * Really remove the record from database
+     *
+     * @param int|string $id
+     * @return $this
+     * @see PageModel::reallyDestroy
+     */
+    public function reallyDestroy($id = null): self
+    {
+    }
+
+    /**
+     * Add a query to filter soft deleted records
+     *
+     * @return $this
+     * @see PageModel::withoutDeleted
+     */
+    public function withoutDeleted(): self
+    {
+    }
+
+    /**
+     * Add a query to return only deleted records
+     *
+     * @return $this
+     * @see PageModel::onlyDeleted
+     */
+    public function onlyDeleted(): self
+    {
+    }
+
+    /**
+     * Remove "withoutDeleted" in the query, expect to return all records
+     *
+     * @return $this
+     * @see PageModel::withDeleted
+     */
+    public function withDeleted(): self
     {
     }
 }

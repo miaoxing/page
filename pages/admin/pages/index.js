@@ -4,6 +4,7 @@ import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
 import {Tag} from 'antd';
+import api from '@mxjs/api';
 
 const types = {
   1: <Tag color="blue">独立页面</Tag>,
@@ -45,8 +46,14 @@ const Index = () => {
             {
               title: '操作',
               dataIndex: 'id',
-              render: (id) => (
+              render: (id, data) => (
                 <LinkActions>
+                  {data.type === 1 && <a href="#" onClick={async (e) => {
+                    e.preventDefault();
+                    const ret = await api.put('pages/index', {data:{id}});
+                    $.ret(ret);
+                    table.reload();
+                  }}>设为首页</a>}
                   <CEditLink id={id}/>
                   <CTableDeleteLink id={id}/>
                 </LinkActions>

@@ -33,6 +33,10 @@
       "plugins/{$name}/": [
         "type:miaoxing-plugin"
       ]
+    },
+    "require-ci": {
+      "miaoxing/plugin": "miaoxing/plugin",
+      "miaoxing/service": "miaoxing/service"
     }
   }
 }

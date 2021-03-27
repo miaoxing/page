@@ -73,7 +73,7 @@ describe(path, () => {
         ],
       })))
       .mockImplementationOnce(() => promise2.resolve(Ret.new({
-        code: 0
+        code: 0,
       })))
       .mockImplementationOnce(() => promise3.resolve(Ret.new({
         code: 0,
@@ -85,7 +85,7 @@ describe(path, () => {
             updatedAt: '2020-01-01 00:00:00',
           },
         ],
-      })))
+      })));
 
     const result = render(<MemoryRouter>
       <Index/>
@@ -96,7 +96,7 @@ describe(path, () => {
     await Promise.all([promise]);
 
     fireEvent.click(link);
-    await waitForElementToBeRemoved(() => result.queryByText('设为首页'))
+    await waitForElementToBeRemoved(() => result.queryByText('设为首页'));
 
     await Promise.all([promise2, promise3]);
 

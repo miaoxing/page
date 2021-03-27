@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@miaoxing/dev": "^6.3.4",
+    "@mxjs/api": "^0.1.1",
     "@mxjs/a-clink": "^0.1.5",
     "@mxjs/a-form": "^0.2.12",
     "@mxjs/a-page": "^0.2.5",

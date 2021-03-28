@@ -36,7 +36,8 @@
     },
     "require-ci": {
       "miaoxing/plugin": "miaoxing/plugin",
-      "miaoxing/services": "miaoxing/services"
+      "miaoxing/services": "miaoxing/services",
+      "miaoxing/app": "miaoxing/app"
     }
   }
 }

@@ -35,9 +35,9 @@
       ]
     },
     "require-ci": {
-      "miaoxing/plugin": "miaoxing/plugin",
-      "miaoxing/services": "miaoxing/services",
-      "miaoxing/app": "miaoxing/app"
+      "miaoxing/plugin": "miaoxing/plugin as 0.4.x-dev",
+      "miaoxing/services": "miaoxing/services as 0.3.x-dev",
+      "miaoxing/app": "miaoxing/app as 0.2.x-dev"
     }
   }
 }

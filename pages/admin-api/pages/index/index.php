@@ -9,7 +9,10 @@ return new class extends BaseController {
     {
         $page = PageModel::findOrFail(req('id'));
 
-        PageModel::findBy('type', PageModel::TYPE_INDEX)->save(['type' => PageModel::TYPE_STANDALONE]);
+        $indexPage = PageModel::findBy('type', PageModel::TYPE_INDEX);
+        if ($indexPage) {
+            $indexPage->save(['type' => PageModel::TYPE_STANDALONE]);
+        }
 
         $page->save(['type' => PageModel::TYPE_INDEX]);
 

@@ -28,4 +28,18 @@ class IndexTest extends BaseTestCase
         $indexPage->reload();
         $this->assertSame(PageModel::TYPE_STANDALONE, $indexPage->type);
     }
+
+    public function testPutWithoutOldIndex()
+    {
+        $page = PageModel::findBy(['type' => PageModel::TYPE_INDEX]);
+        if ($page) {
+            $page->destroy();
+        }
+
+        $page = PageModel::save([
+            'name' => '测试新首页',
+        ]);
+        $ret = Tester::putAdminApi('pages/index', ['id' => $page->id]);
+        $this->assertRetSuc($ret);
+    }
 }

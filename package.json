@@ -7,14 +7,28 @@
   "scripts": {
     "test": "jest"
   },
+  "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@mxjs/cur-url": "^0.2.9",
+    "color": "^3.1.2",
+    "lodash": "^4.17.20",
+    "react-beautiful-dnd": "^13.1.0",
+    "prop-types": "^15.7.2",
+    "@chakra-ui/react": "^1.4.2",
+    "@emotion/styled": "^11.1.5",
+    "framer-motion": "^4.1.2",
+    "@mxjs/upload": "^0.3.10",
+    "@mxjs/a-color-picker": "^0.1.0",
+    "@mxjs/ueditor": "^0.1.3"
+  },
   "devDependencies": {
     "@miaoxing/dev": "^6.3.4",
-    "@mxjs/api": "^0.1.1",
     "@mxjs/a-clink": "^0.1.5",
     "@mxjs/a-form": "^0.2.12",
     "@mxjs/a-page": "^0.2.5",
     "@mxjs/a-table": "^0.3.8",
     "@mxjs/actions": "^0.1.0",
+    "@mxjs/api": "^0.1.1",
     "@mxjs/app": "^0.2.9",
     "@mxjs/test": "^0.1.5",
     "@testing-library/react": "^10.0.4",
@@ -27,6 +41,10 @@
     "react-router": "^5.2.0",
     "regenerator-runtime": "^0.13.5",
     "typescript": "^3.8.3"
+  },
+  "ciDependencies": {
+    "@mxjs/a-form": "miaoxing/mxjs-a-form",
+    "@mxjs/a-color-picker": "miaoxing/mxjs-a-color-picker"
   },
   "jest": {
     "preset": "jest-preset-miaoxing"

@@ -23,7 +23,7 @@ const PagePreview = ({navStyle = {}, title}) => {
 };
 
 PagePreview.propTypes = {
-  style: PropTypes.object,
+  navStyle: PropTypes.object,
   title: PropTypes.string,
 };
 

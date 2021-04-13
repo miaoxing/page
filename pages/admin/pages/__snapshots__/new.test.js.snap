@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`admin/page flow 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/page/defaults",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/page flow 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/page/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "components": Array [
+            Object {
+              "id": "fixed",
+              "props": Object {
+                "name": "自定义页面名称",
+                "navStyle": Object {
+                  "backgroundColor": "#ffffff",
+                  "color": "black",
+                },
+                "shareImage": undefined,
+                "shareTitle": undefined,
+                "title": undefined,
+              },
+              "sort": 1000,
+              "type": "page",
+            },
+            Object {
+              "id": "fixed",
+              "props": Object {
+                "content": "<p>
+    这是一段文字😄，您可以设置<strong>加粗</strong>，<span style=\\"color: #1890ff;\\">颜色</span>，<span style=\\"background-color: #fa8c16;\\">背景色</span>，等等。
+</p>",
+              },
+              "sort": 999,
+              "type": "richText",
+            },
+          ],
+          "name": "自定义页面名称",
+        },
+        "loading": true,
+        "method": "POST",
+        "url": "/admin-api/page",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/page form 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/page/defaults",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/page form 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/page/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "components": Array [
+            Object {
+              "id": "fixed",
+              "props": Object {
+                "name": "未命名页面",
+                "navStyle": Object {
+                  "backgroundColor": "#ffffff",
+                  "color": "black",
+                },
+                "shareImage": undefined,
+                "shareTitle": undefined,
+                "title": undefined,
+              },
+              "sort": 1000,
+              "type": "page",
+            },
+            Object {
+              "id": "fixed",
+              "props": Object {
+                "duration": 3000,
+                "items": Array [
+                  Object {
+                    "image": "undefined/plugins/page/images/default-swiper.svg",
+                  },
+                  Object {
+                    "image": "undefined/plugins/page/images/default-swiper.svg",
+                  },
+                  Object {
+                    "image": "undefined/plugins/page/images/default-swiper.svg",
+                  },
+                ],
+              },
+              "sort": 999,
+              "type": "swiper",
+            },
+            Object {
+              "id": "fixed",
+              "props": Object {
+                "items": Array [
+                  Object {
+                    "image": "undefined/plugins/page/images/default-nav.svg",
+                    "title": "导航1",
+                  },
+                  Object {
+                    "image": "undefined/plugins/page/images/default-nav.svg",
+                    "title": "导航2",
+                  },
+                  Object {
+                    "image": "undefined/plugins/page/images/default-nav.svg",
+                    "title": "导航3",
+                  },
+                  Object {
+                    "image": "undefined/plugins/page/images/default-nav.svg",
+                    "title": "导航4",
+                  },
+                ],
+                "rowNum": 4,
+                "style": Object {
+                  "backgroundColor": undefined,
+                  "color": "#262626",
+                },
+              },
+              "sort": 998,
+              "type": "nav",
+            },
+            Object {
+              "id": "fixed",
+              "props": Object {
+                "content": "<p>
+    这是一段文字😄，您可以设置<strong>加粗</strong>，<span style=\\"color: #1890ff;\\">颜色</span>，<span style=\\"background-color: #fa8c16;\\">背景色</span>，等等。
+</p>",
+              },
+              "sort": 997,
+              "type": "richText",
+            },
+          ],
+          "name": "未命名页面",
+        },
+        "loading": true,
+        "method": "POST",
+        "url": "/admin-api/page",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;

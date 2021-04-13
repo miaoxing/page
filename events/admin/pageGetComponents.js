@@ -25,7 +25,7 @@ export default [
       navStyle: {
         color: 'black',
         backgroundColor: '#ffffff',
-      }
+      },
     },
   },
   {

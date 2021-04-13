@@ -44,7 +44,11 @@
   },
   "ciDependencies": {
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
-    "@mxjs/a-color-picker": "miaoxing/mxjs-a-color-picker"
+    "@mxjs/a-color-picker": "miaoxing/mxjs-a-color-picker",
+    "@mxjs/a-page": "miaoxing/mxjs-a-page",
+    "@mxjs/app": "miaoxing/mxjs-app",
+    "@mxjs/css": "miaoxing/mxjs-css",
+    "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing"
   },
   "jest": {
     "preset": "jest-preset-miaoxing"

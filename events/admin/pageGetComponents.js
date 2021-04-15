@@ -1,9 +1,11 @@
 import React from 'react';
-import {PicLeftOutlined} from '@ant-design/icons';
+import {PicLeftOutlined, ExpandOutlined} from '@ant-design/icons';
 import PagePreview from '../../components/PagePreview';
 import PageConfig from '../../components/PageConfig';
 import RichTextPreview from '../../components/RichTextPreview';
 import RichTextConfig from '../../components/RichTextConfig';
+import SpacePreview from '../../components/SpacePreview';
+import SpaceConfig from '../../components/SpaceConfig';
 
 export default [
   {
@@ -39,6 +41,19 @@ export default [
       content: `<p>
     这是一段文字😄，您可以设置<strong>加粗</strong>，<span style="color: #1890ff;">颜色</span>，<span style="background-color: #fa8c16;">背景色</span>，等等。
 </p>`,
+    },
+  },
+  {
+    type: 'space',
+    name: '空白间距',
+    sort: 90,
+    icon: <ExpandOutlined/>,
+    preview: SpacePreview,
+    config: SpaceConfig,
+    default: {
+      style: {
+        height: 20,
+      },
     },
   },
 ];

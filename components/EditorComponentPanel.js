@@ -14,8 +14,13 @@ const EditorComponentPanel = ({components, onAdd}) => {
           return <Col key={component.type} span={8}>
             <Button
               block
-              // 默认写死了高度导致不能换行
-              style={{height: 'auto'}}
+              style={{
+                // 默认写死了高度导致不能换行
+                height: 'auto',
+                // 组件名称包含 4 个字符时能正常显示
+                paddingLeft: 0,
+                paddingRight: 0,
+              }}
               onClick={() => onAdd(component.type)}
             >
               {component.icon}

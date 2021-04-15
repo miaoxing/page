@@ -1,11 +1,13 @@
 import React from 'react';
-import {PicLeftOutlined, ExpandOutlined} from '@ant-design/icons';
+import {PicLeftOutlined, ExpandOutlined, LineOutlined} from '@ant-design/icons';
 import PagePreview from '../../components/PagePreview';
 import PageConfig from '../../components/PageConfig';
 import RichTextPreview from '../../components/RichTextPreview';
 import RichTextConfig from '../../components/RichTextConfig';
 import SpacePreview from '../../components/SpacePreview';
 import SpaceConfig from '../../components/SpaceConfig';
+import DividerPreview from '../../components/DividerPreview';
+import DividerConfig from '../../components/DividerConfig';
 
 export default [
   {
@@ -53,6 +55,22 @@ export default [
     default: {
       style: {
         height: 20,
+      },
+    },
+  },
+  {
+    type: 'divider',
+    name: '分割线',
+    sort: 80,
+    icon: <LineOutlined/>,
+    preview: DividerPreview,
+    config: DividerConfig,
+    default: {
+      style: {
+        my: 10,
+        mx: 0,
+        borderStyle: 'solid',
+        borderColor: '#f0f0f0',
       },
     },
   },

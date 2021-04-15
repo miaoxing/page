@@ -8,6 +8,8 @@ use Miaoxing\Plugin\Seeder\BaseSeeder;
 
 class V20210415005139CreatePages extends BaseSeeder
 {
+    private const CREATE_PAGE_COUNT = 10;
+
     /**
      * {@inheritdoc}
      */
@@ -22,7 +24,7 @@ class V20210415005139CreatePages extends BaseSeeder
             $this->updateComponents($page, $faker);
         }
 
-        for ($i = 0; $i <= 10; ++$i) {
+        for ($i = 0; $i <= static::CREATE_PAGE_COUNT; ++$i) {
             $page = PageModel::save([
                 'name' => $faker->words(3, true),
                 'type' => PageModel::TYPE_STANDALONE,

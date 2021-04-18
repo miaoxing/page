@@ -8,15 +8,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.5",
+    "@mxjs/css": "^0.1.0",
     "@mxjs/cur-url": "^0.2.9",
     "color": "^3.1.2",
     "lodash": "^4.17.20",
     "react-beautiful-dnd": "^13.1.0",
     "prop-types": "^15.7.2",
-    "@chakra-ui/react": "^1.4.2",
-    "@emotion/styled": "^11.1.5",
-    "framer-motion": "^4.1.2",
     "@mxjs/upload": "^0.3.10",
     "@mxjs/a-color-picker": "^0.1.0",
     "@mxjs/ueditor": "^0.1.3"

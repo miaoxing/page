@@ -1,5 +1,5 @@
 import React from 'react';
-import {css} from '@chakra-ui/react';
+import {css} from '@mxjs/css';
 import PropTypes from 'prop-types';
 
 const contentCss = css({

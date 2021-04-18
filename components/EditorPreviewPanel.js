@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {useForm} from '@mxjs/a-form';
-import {css} from '@chakra-ui/react';
+import {css} from '@mxjs/css';
 import PropTypes from 'prop-types';
 
 const previewPanel = css({

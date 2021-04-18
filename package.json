@@ -44,6 +44,7 @@
     "@mxjs/a-color-picker": "miaoxing/mxjs-a-color-picker",
     "@mxjs/a-page": "miaoxing/mxjs-a-page",
     "@mxjs/app": "miaoxing/mxjs-app",
+    "@mxjs/box": "miaoxing/mxjs-box",
     "@mxjs/css": "miaoxing/mxjs-css",
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing"
   },

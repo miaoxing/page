@@ -49,9 +49,32 @@ class V20210415005139CreatePages extends BaseSeeder
                 ],
             ],
             [
-                'type' => 'richText',
+                'type' => 'swiper',
                 'props' => [
-                    'content' => $faker->paragraph,
+                    'items' => [
+                        [],
+                        [],
+                        [],
+                    ],
+                ],
+            ],
+            [
+                'type' => 'nav',
+                'props' => [
+                    'items' => [
+                        [
+                            'title' => '导航1',
+                        ],
+                        [
+                            'title' => '导航2',
+                        ],
+                        [
+                            'title' => '导航3',
+                        ],
+                        [
+                            'title' => '导航4',
+                        ],
+                    ],
                 ],
             ],
             [
@@ -59,6 +82,18 @@ class V20210415005139CreatePages extends BaseSeeder
                 'props' => [
                     'content' => $faker->paragraph,
                 ],
+            ],
+            [
+                'type' => 'divider',
+            ],
+            [
+                'type' => 'richText',
+                'props' => [
+                    'content' => $faker->paragraph,
+                ],
+            ],
+            [
+                'type' => 'divider',
             ],
             [
                 'type' => 'richText',

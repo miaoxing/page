@@ -1,5 +1,11 @@
 import React from 'react';
-import {PicLeftOutlined, ExpandOutlined, LineOutlined, InsertRowBelowOutlined} from '@ant-design/icons';
+import {
+  PicLeftOutlined,
+  ExpandOutlined,
+  LineOutlined,
+  InsertRowBelowOutlined,
+  PictureOutlined,
+} from '@ant-design/icons';
 import PagePreview from '../../components/PagePreview';
 import PageConfig from '../../components/PageConfig';
 import RichTextPreview from '../../components/RichTextPreview';
@@ -10,6 +16,8 @@ import DividerPreview from '../../components/DividerPreview';
 import DividerConfig from '../../components/DividerConfig';
 import NavPreview, {defaultImage as navDefaultImage} from '../../components/NavPreview';
 import NavConfig from '../../components/NavConfig';
+import SwiperPreview, {defaultImage} from '../../components/SwiperPreview';
+import SwiperConfig from '../../components/SwiperConfig';
 
 export default [
   {
@@ -106,6 +114,28 @@ export default [
       style: {
         color: '#262626',
       },
+    },
+  },
+  {
+    type: 'swiper',
+    name: '轮播图',
+    sort: 120,
+    icon: <PictureOutlined/>,
+    preview: SwiperPreview,
+    config: SwiperConfig,
+    default: {
+      duration: 3000,
+      items: [
+        {
+          image: defaultImage,
+        },
+        {
+          image: defaultImage,
+        },
+        {
+          image: defaultImage,
+        },
+      ],
     },
   },
 ];

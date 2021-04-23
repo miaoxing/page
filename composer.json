@@ -8,7 +8,8 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.2.13"
+    "miaoxing/app": "^0.2.13",
+    "miaoxing/link-to": "^0.1.13"
   },
   "require-dev": {
     "miaoxing/dev": "^6.3.4"
@@ -37,7 +38,9 @@
     "require-ci": {
       "miaoxing/plugin": "miaoxing/plugin as 0.4.x-dev",
       "miaoxing/services": "miaoxing/services as 0.3.x-dev",
-      "miaoxing/app": "miaoxing/app as 0.2.x-dev"
+      "miaoxing/app": "miaoxing/app as 0.2.x-dev",
+      "miaoxing/link-to": "miaoxing/link-to as 0.1.x-dev",
+      "wei/wei": "twinh/wei as 0.10.x-dev"
     }
   }
 }

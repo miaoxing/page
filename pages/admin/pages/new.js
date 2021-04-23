@@ -92,6 +92,8 @@ const New = () => {
           if (!ret.data.components) {
             ret.data.components = [
               initComponent('page'),
+              initComponent('swiper'),
+              initComponent('nav'),
               initComponent('richText'),
             ];
           } else {

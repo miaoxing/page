@@ -51,7 +51,8 @@
     "@mxjs/box": "miaoxing/mxjs-box",
     "@mxjs/css": "miaoxing/mxjs-css",
     "@mxjs/upload": "miaoxing/mxjs-upload",
-    "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing"
+    "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
+    "@miaoxing/dev": "miaoxing/dev"
   },
   "jest": {
     "preset": "jest-preset-miaoxing"

@@ -32,7 +32,7 @@
     "@mxjs/app": "^0.3.0",
     "@mxjs/test": "^0.1.6",
     "@testing-library/react": "^11.2.6",
-    "antd": "^4.13.1",
+    "antd": "^4.15.2",
     "core-js": "^3.6.5",
     "jest-preset-miaoxing": "^0.2.3",
     "miaoxing": "^0.2.3",

@@ -1,3 +1,30 @@
+## [0.1.1](https://github.com/miaoxing/page/compare/v0.1.0...v0.1.1) (2021-05-11)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/css:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/cur-url:** upgrade from `0.2.10` to `0.2.11`
+* **@mxjs/upload:** upgrade from `0.4.0` to `0.4.1`
+* **@mxjs/a-color-picker:** upgrade from `0.1.0` to `0.1.1`
+* **@mxjs/ueditor:** upgrade from `0.1.4` to `0.1.5`
+* **@miaoxing/dev:** upgrade from `6.4.0` to `7.0.0`
+* **@mxjs/a-clink:** upgrade from `0.1.6` to `0.1.7`
+* **@mxjs/a-form:** upgrade from `0.2.13` to `0.2.14`
+* **@mxjs/a-page:** upgrade from `0.2.6` to `0.2.7`
+* **@mxjs/a-table:** upgrade from `0.3.9` to `0.3.10`
+* **@mxjs/actions:** upgrade from `0.1.1` to `0.1.2`
+* **@mxjs/api:** upgrade from `0.1.1` to `0.1.2`
+* **@mxjs/app:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/test:** upgrade from `0.1.6` to `0.1.7`
+* **jest-preset-miaoxing:** upgrade from `0.2.3` to `0.2.4`
+* **miaoxing:** upgrade from `0.2.3` to `0.2.4`
+* **@miaoxing/app:** upgrade from `0.3.0` to `0.3.1`
+* **@miaoxing/link-to:** upgrade from `0.1.14` to `0.1.15`
+
 # 0.1.0 (2021-04-27)
 
 

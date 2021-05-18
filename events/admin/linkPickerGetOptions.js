@@ -30,7 +30,9 @@ const PagePicker = ({pickerRef, linkPicker, value}) => {
       padding: '1rem',
     }}
     onOk={() => {
-      linkPicker.addValue({id}, {name});
+      if (id) {
+        linkPicker.addValue({id}, {name});
+      }
       setVisible(false);
     }}
     onCancel={() => {

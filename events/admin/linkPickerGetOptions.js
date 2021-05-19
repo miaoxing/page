@@ -3,11 +3,11 @@ import {Button, Modal} from 'antd';
 import api from '@mxjs/api';
 import {Table, TableProvider, useTable} from '@mxjs/a-table';
 import {SearchForm, SearchItem} from '@mxjs/a-form';
-import {CNewBtn} from '@mxjs/a-clink';
 import {PageActions} from '@mxjs/a-page';
 import Icon from '@mxjs/icons';
 import $ from 'miaoxing';
 import PropTypes from 'prop-types';
+import {NewBtn} from '@mxjs/a-button';
 
 const PagePicker = ({pickerRef, linkPicker, value}) => {
   const [table] = useTable();
@@ -41,9 +41,9 @@ const PagePicker = ({pickerRef, linkPicker, value}) => {
   >
     <TableProvider>
       <PageActions>
-        <CNewBtn target="_blank">
+        <NewBtn href={$.url('admin/pages/new')} target="_blank">
           添 加{' '}<Icon type="mi-external-link"/>
-        </CNewBtn>
+        </NewBtn>
         <Button onClick={() => {
           table.reload();
         }}>刷新</Button>

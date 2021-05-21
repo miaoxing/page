@@ -1,3 +1,21 @@
+## [0.1.3](https://github.com/miaoxing/page/compare/v0.1.2...v0.1.3) (2021-05-21)
+
+
+### Bug Fixes
+
+* **page:** 未选择页面时点击确认按钮出错 ([054593f](https://github.com/miaoxing/page/commit/054593feae5ef23ce318ec0ee9fdcb3be11419e1))
+* **page:** 选择页面窗口中，添加页面链接错误 ([35d6a06](https://github.com/miaoxing/page/commit/35d6a06ba583bcde13ff67bb01e3981bf97d3c1e))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/upload:** upgrade from `0.4.2` to `0.4.3`
+* **@miaoxing/app:** upgrade from `0.3.2` to `0.3.3`
+* **@miaoxing/link-to:** upgrade from `0.1.16` to `0.1.17`
+
 ## [0.1.2](https://github.com/miaoxing/page/compare/v0.1.1...v0.1.2) (2021-05-12)
 
 

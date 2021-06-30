@@ -94,7 +94,7 @@ const PagePickerLabel = ({value, extra}) => {
   useEffect(() => {
     if (!extra.name) {
       (async () => {
-        const ret = await api.get('pages/' + value.id);
+        const {ret} = await api.get('pages/' + value.id);
         setName(ret.data.name);
       })();
     }

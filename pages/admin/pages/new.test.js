@@ -39,17 +39,21 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: {
-          id: 1,
-          name: 'page',
-        },
-      })))
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            id: 1,
+            name: 'page',
+          },
+        }),
+      }))
       // 提交
-      .mockImplementationOnce(() => promise2.resolve(Ret.new({
-        code: 1,
-      })));
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.new({
+          code: 1,
+        }),
+      }));
 
     const result = render(<MemoryRouter>
       <Page/>
@@ -81,26 +85,30 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: {
-          id: 1,
-          name: 'page',
-          components: [
-            {
-              id: 1,
-              type: 'page',
-              props: {
-                name: '自定义页面名称',
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            id: 1,
+            name: 'page',
+            components: [
+              {
+                id: 1,
+                type: 'page',
+                props: {
+                  name: '自定义页面名称',
+                },
               },
-            },
-          ],
-        },
-      })))
+            ],
+          },
+        }),
+      }))
       // 提交
-      .mockImplementationOnce(() => promise2.resolve(Ret.new({
-        code: 1,
-      })));
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.new({
+          code: 1,
+        }),
+      }));
 
     const result = render(<MemoryRouter>
       <Page/>
@@ -151,22 +159,24 @@ describe(path, () => {
     const promise = createPromise();
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: {
-          id: 1,
-          name: 'page',
-          components: [
-            {
-              id: 1,
-              type: 'page',
-              props: {
-                name: '自定义页面名称',
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            id: 1,
+            name: 'page',
+            components: [
+              {
+                id: 1,
+                type: 'page',
+                props: {
+                  name: '自定义页面名称',
+                },
               },
-            },
-          ],
-        },
-      })));
+            ],
+          },
+        }),
+      }));
 
     const result = render(<MemoryRouter>
       <Page/>
@@ -185,29 +195,31 @@ describe(path, () => {
     const promise = createPromise();
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: {
-          id: 1,
-          name: 'page',
-          components: [
-            {
-              id: 1,
-              type: 'page',
-              props: {
-                title: '自定义页面标题',
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            id: 1,
+            name: 'page',
+            components: [
+              {
+                id: 1,
+                type: 'page',
+                props: {
+                  title: '自定义页面标题',
+                },
               },
-            },
-            {
-              id: 2,
-              type: 'richText',
-              props: {
-                content: '富文本内容',
+              {
+                id: 2,
+                type: 'richText',
+                props: {
+                  content: '富文本内容',
+                },
               },
-            },
-          ],
-        },
-      })));
+            ],
+          },
+        }),
+      }));
 
     const result = render(<MemoryRouter>
       <Page/>
@@ -236,22 +248,24 @@ describe(path, () => {
     const promise = createPromise();
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: {
-          id: 1,
-          name: 'page',
-          components: [
-            {
-              id: 1,
-              type: 'page',
-              props: {
-                name: '自定义页面名称',
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            id: 1,
+            name: 'page',
+            components: [
+              {
+                id: 1,
+                type: 'page',
+                props: {
+                  name: '自定义页面名称',
+                },
               },
-            },
-          ],
-        },
-      })));
+            ],
+          },
+        }),
+      }));
 
     const result = render(<MemoryRouter>
       <Page/>

@@ -51,7 +51,7 @@ const Index = () => {
                 <LinkActions>
                   {data.type === 1 && <a href="#" onClick={async (e) => {
                     e.preventDefault();
-                    const ret = await api.put('pages/index', {data:{id}});
+                    const {ret} = await api.put('pages/index', {data:{id}});
                     $.ret(ret);
                     table.reload();
                   }}>设为首页</a>}

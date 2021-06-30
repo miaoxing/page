@@ -29,17 +29,19 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取列表数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 0,
-        data: [
-          {
-            id: 1,
-            name: '测试页面',
-            type: 1,
-            updatedAt: '2020-01-01 00:00:00',
-          },
-        ],
-      })));
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 0,
+          data: [
+            {
+              id: 1,
+              name: '测试页面',
+              type: 1,
+              updatedAt: '2020-01-01 00:00:00',
+            },
+          ],
+        }),
+      }));
 
     const {findByText} = render(<MemoryRouter>
       <Index/>
@@ -61,31 +63,37 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取列表数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 0,
-        data: [
-          {
-            id: 1,
-            name: '测试页面',
-            type: 1,
-            updatedAt: '2020-01-01 00:00:00',
-          },
-        ],
-      })))
-      .mockImplementationOnce(() => promise2.resolve(Ret.new({
-        code: 0,
-      })))
-      .mockImplementationOnce(() => promise3.resolve(Ret.new({
-        code: 0,
-        data: [
-          {
-            id: 1,
-            name: '测试页面',
-            type: 2,
-            updatedAt: '2020-01-01 00:00:00',
-          },
-        ],
-      })));
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 0,
+          data: [
+            {
+              id: 1,
+              name: '测试页面',
+              type: 1,
+              updatedAt: '2020-01-01 00:00:00',
+            },
+          ],
+        }),
+      }))
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.new({
+          code: 0,
+        }),
+      }))
+      .mockImplementationOnce(() => promise3.resolve({
+        ret: Ret.new({
+          code: 0,
+          data: [
+            {
+              id: 1,
+              name: '测试页面',
+              type: 2,
+              updatedAt: '2020-01-01 00:00:00',
+            },
+          ],
+        }),
+      }));
 
     const result = render(<MemoryRouter>
       <Index/>

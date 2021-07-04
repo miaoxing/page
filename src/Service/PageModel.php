@@ -24,7 +24,7 @@ class PageModel extends BaseModel
 
     public const TYPE_INDEX = 2;
 
-    public function components()
+    public function components(): PageComponentModel
     {
         return $this->hasMany(PageComponentModel::class)->desc('sort');
     }

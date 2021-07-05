@@ -41,6 +41,7 @@
     "typescript": "^3.8.3"
   },
   "ciDependencies": {
+    "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
     "@mxjs/a-color-picker": "miaoxing/mxjs-a-color-picker",
     "@mxjs/a-link-picker": "miaoxing/mxjs-a-link-picker",

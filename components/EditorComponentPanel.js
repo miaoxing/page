@@ -1,4 +1,3 @@
-import React from 'react';
 import {Button, Card, Col, Row} from 'antd';
 import PropTypes from 'prop-types';
 

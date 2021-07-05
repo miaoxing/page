@@ -1,4 +1,3 @@
-import React from 'react';
 import {Card} from 'antd';
 import {FormUeditor} from '@mxjs/ueditor';
 import PropTypes from 'prop-types';

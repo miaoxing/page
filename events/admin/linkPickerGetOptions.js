@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Button, Modal} from 'antd';
 import api from '@mxjs/api';
 import {Table, TableProvider, useTable} from '@mxjs/a-table';

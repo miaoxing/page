@@ -1,4 +1,3 @@
-import React from 'react';
 import {useForm} from '@mxjs/a-form';
 
 const EditorConfigPanel = ({fields, components, selectedIndex}) => {

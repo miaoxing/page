@@ -1,4 +1,3 @@
-import React from 'react';
 import {Button, Card, Divider, Form, Input} from 'antd';
 import PropTypes from 'prop-types';
 import {FormItem} from '@mxjs/a-form';

@@ -1,4 +1,3 @@
-import React from 'react';
 import {Button, Card, Divider, Form, Radio} from 'antd';
 import PropTypes from 'prop-types';
 import ColorPicker from '@mxjs/a-color-picker';

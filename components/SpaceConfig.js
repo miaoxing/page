@@ -1,4 +1,3 @@
-import React from 'react';
 import {Card, Slider, Input, Row, Col} from 'antd';
 import PropTypes from 'prop-types';
 import ColorPicker from '@mxjs/a-color-picker';

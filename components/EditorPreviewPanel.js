@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import { Fragment, useEffect, useRef } from 'react';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {useForm} from '@mxjs/a-form';
 import {css} from '@mxjs/css';
@@ -189,7 +189,7 @@ const EditorPreviewPanel = (
           let Wrapper;
           let wrapperProps = {};
           if (component.draggable === false) {
-            Wrapper = React.Fragment;
+            Wrapper = Fragment;
           } else {
             Wrapper = EditorPreviewDraggable;
             wrapperProps = {index, draggableId: key.toString()};

@@ -3,7 +3,6 @@ import {FormItem} from '@mxjs/a-form';
 import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import ColorPicker from '@mxjs/a-color-picker';
-import React from 'react';
 import PropTypes from 'prop-types';
 
 const PageConfig = ({propName}) => {

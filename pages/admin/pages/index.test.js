@@ -29,8 +29,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 0,
+        ret: Ret.suc({
           data: [
             {
               id: 1,
@@ -63,8 +62,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 0,
+        ret: Ret.suc({
           data: [
             {
               id: 1,
@@ -76,13 +74,10 @@ describe(path, () => {
         }),
       }))
       .mockImplementationOnce(() => promise2.resolve({
-        ret: Ret.new({
-          code: 0,
-        }),
+        ret: Ret.suc(),
       }))
       .mockImplementationOnce(() => promise3.resolve({
-        ret: Ret.new({
-          code: 0,
+        ret: Ret.suc({
           data: [
             {
               id: 1,

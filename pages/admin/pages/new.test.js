@@ -39,8 +39,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             id: 1,
             name: 'page',
@@ -49,9 +48,7 @@ describe(path, () => {
       }))
       // 提交
       .mockImplementationOnce(() => promise2.resolve({
-        ret: Ret.new({
-          code: 1,
-        }),
+        ret: Ret.suc(),
       }));
 
     const result = render(<MemoryRouter>
@@ -85,8 +82,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             id: 1,
             name: 'page',
@@ -104,9 +100,7 @@ describe(path, () => {
       }))
       // 提交
       .mockImplementationOnce(() => promise2.resolve({
-        ret: Ret.new({
-          code: 1,
-        }),
+        ret: Ret.suc(),
       }));
 
     const result = render(<MemoryRouter>
@@ -159,8 +153,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             id: 1,
             name: 'page',
@@ -195,8 +188,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             id: 1,
             name: 'page',
@@ -248,8 +240,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             id: 1,
             name: 'page',

@@ -13,7 +13,7 @@ return new
 class extends BaseController {
     use ItemTrait;
 
-    protected $expand = [
+    protected $include = [
         'components',
     ];
 

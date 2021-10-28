@@ -1,3 +1,49 @@
+# [0.2.0](https://github.com/miaoxing/page/compare/v0.1.3...v0.2.0) (2021-10-28)
+
+
+### Code Refactoring
+
+* `expand` 参数改为 `include` ([87874b4](https://github.com/miaoxing/page/commit/87874b4bd4a5f6630aacdc0de7fd74c973a40741))
+* **Model:** 模型的关联方法加上返回值 ([177dc4c](https://github.com/miaoxing/page/commit/177dc4c12854ef9507199ef524506aeca1e3bb9a))
+
+
+### Features
+
+* 更新 `react` 到 17 ([ddd0fda](https://github.com/miaoxing/page/commit/ddd0fdae28edd9cc6860c6af70a77315a0c7e811))
+* 模型通过 `SnowflakeTrait` 生成 id ([bcae7cb](https://github.com/miaoxing/page/commit/bcae7cb34c4424d8f13b8ed6aed77b6804a0d0d5))
+
+
+### BREAKING CHANGES
+
+* `expand` 参数改为 `include`
+* 更新 `react` 到 17
+* **Model:** 模型的关联方法加上返回值
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/css:** upgrade from `0.2.2` to `0.2.3`
+* **@mxjs/cur-url:** upgrade from `0.2.12` to `0.2.13`
+* **@mxjs/upload:** upgrade from `0.4.3` to `0.5.0`
+* **@mxjs/a-color-picker:** upgrade from `0.1.2` to `0.2.0`
+* **@mxjs/ueditor:** upgrade from `0.1.6` to `0.2.0`
+* **@miaoxing/dev:** upgrade from `7.0.1` to `8.0.0`
+* **@mxjs/a-clink:** upgrade from `0.1.8` to `0.2.0`
+* **@mxjs/a-form:** upgrade from `0.2.15` to `0.3.0`
+* **@mxjs/a-page:** upgrade from `0.2.8` to `0.3.0`
+* **@mxjs/a-table:** upgrade from `0.3.11` to `0.4.0`
+* **@mxjs/actions:** upgrade from `0.1.3` to `0.2.0`
+* **@mxjs/api:** upgrade from `0.1.3` to `0.1.4`
+* **@mxjs/app:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/test:** upgrade from `0.1.8` to `0.2.0`
+* **jest-preset-miaoxing:** upgrade from `0.2.4` to `0.2.5`
+* **miaoxing:** upgrade from `0.2.5` to `0.3.0`
+* **@miaoxing/app:** upgrade from `0.3.3` to `0.4.0`
+* **@miaoxing/link-to:** upgrade from `0.1.17` to `0.1.18`
+
 ## [0.1.3](https://github.com/miaoxing/page/compare/v0.1.2...v0.1.3) (2021-05-21)
 
 

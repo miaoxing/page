@@ -4,7 +4,7 @@ use Miaoxing\Page\Service\PageModel;
 use Miaoxing\Plugin\BaseController;
 use Wei\Ret;
 
-return new class extends BaseController {
+return new class () extends BaseController {
     public function put(): Ret
     {
         $page = PageModel::findOrFail(req('id'));

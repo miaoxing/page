@@ -6,11 +6,10 @@ use Miaoxing\Services\Page\ItemTrait;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\V;
 
-return new
-/**
+return new /**
  * @mixin \ObjectReqMixin
  */
-class extends BaseController {
+class () extends BaseController {
     use ItemTrait;
 
     protected $include = [

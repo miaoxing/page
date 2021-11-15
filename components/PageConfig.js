@@ -4,13 +4,18 @@ import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import ColorPicker from '@mxjs/a-color-picker';
 import PropTypes from 'prop-types';
+import Input from '@mxjs/a-input';
 
 const PageConfig = ({propName}) => {
   return (
     <Card title="页面">
-      <FormItem name={propName('name')} label="页面名称" extra="仅供后台展示"/>
+      <FormItem name={propName('name')} label="页面名称" extra="仅供后台展示">
+        <Input maxLength={255}/>
+      </FormItem>
 
-      <FormItem name={propName('shareTitle')} label="分享标题"/>
+      <FormItem name={propName('shareTitle')} label="分享标题">
+        <Input maxLength={255}/>
+      </FormItem>
 
       <FormItem name={propName('shareImage')} label="分享图片">
         <Upload url={$.apiUrl('files', {type: 'image'})} max={1}/>
@@ -18,7 +23,9 @@ const PageConfig = ({propName}) => {
 
       <Divider/>
 
-      <FormItem name={propName('title')} label="页面标题"/>
+      <FormItem name={propName('title')} label="页面标题">
+        <Input maxLength={255}/>
+      </FormItem>
 
       <FormItem name={propName(['navStyle', 'color'])} label="标题颜色">
         <Radio.Group>

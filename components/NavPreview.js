@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {Flex} from '@mxjs/box';
+import {Box} from '@mxjs/box';
 import {css} from '@chakra-ui/react';
 import $ from 'miaoxing';
 
@@ -20,7 +20,7 @@ const NavPreview = ({style = {}, rowNum = 4, items = []}) => {
   const width = (100 / rowNum) + '%';
 
   return (
-    <Flex direction="row" flexFlow="wrap" style={{
+    <Box flex flexWrap style={{
       ...style,
     }}>
       {items.map((item, i) => {
@@ -31,7 +31,7 @@ const NavPreview = ({style = {}, rowNum = 4, items = []}) => {
           </div>
         );
       })}
-    </Flex>
+    </Box>
   );
 };
 

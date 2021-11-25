@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {Box} from '@mxjs/box';
 import {css} from '@chakra-ui/react';
-import $ from 'miaoxing';
+import defaultImage from '../images/default-nav.svg';
 
 const itemCss = css({
   textAlign: 'center',
@@ -13,8 +13,6 @@ const img = css({
   width: '48px',
   height: '48px',
 });
-
-const defaultImage = window.location.origin + $.url('plugins/page/images/default-nav.svg');
 
 const NavPreview = ({style = {}, rowNum = 4, items = []}) => {
   const width = (100 / rowNum) + '%';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {css} from '@chakra-ui/react';
 import {Carousel} from 'antd';
-import $ from 'miaoxing';
+import defaultImage from '../images/default-swiper.svg';
 
 const carousel = css({
   '.slick-dots.slick-dots li': {
@@ -30,8 +30,6 @@ const carousel = css({
 const img = css({
   maxWidth: '100%',
 });
-
-const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');
 
 const SwiperPreview = ({duration, items = []}) => {
   return (

@@ -6,7 +6,6 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form} from '@mxjs/a-form';
 import {Col, Row, Form as AntdForm, Dropdown, Menu} from 'antd';
-import {floatRight} from '@mxjs/css';
 import curUrl from '@mxjs/cur-url';
 import {event} from '@mxjs/app';
 import EditorComponentPanel from '../../../components/EditorComponentPanel';
@@ -122,13 +121,12 @@ const New = () => {
           ret.isSuc() && form.setFieldsValue(ret.data);
         }}
       >
-        <PageActions>
+        <PageActions toBetween>
           <CListBtn/>
 
           <Dropdown.Button
             type="primary"
             htmlType="submit"
-            css={floatRight()}
             overlay={
               <Menu>
                 <Menu.Item onClick={() => {

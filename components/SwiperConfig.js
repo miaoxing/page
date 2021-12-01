@@ -4,33 +4,34 @@ import {FormItem} from '@mxjs/a-form';
 import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import {PlusOutlined, CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
-import {css} from '@chakra-ui/react';
+import {css} from '@fower/core';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
+import {spacing} from '@mxjs/css';
 
-const navItem = css({
+const navItemClass = css({
   position: 'relative',
-  mb: 4,
-  px: 6,
-  pt: 6,
-  boxShadow: 'sm',
-  border: '1px solid',
-  borderColor: 'gray.100',
-  _hover: {
+  mb4: true,
+  px6: true,
+  pt6: true,
+  shadowTiny: true,
+  border: 1,
+  borderColor: 'gray100',
+  ':hover': {
     '> .toolbar': {
       display: 'block',
     },
   },
 });
 
-const toolbar = css({
+const toolbarClass = css({
   display: 'none',
   position: 'absolute',
-  top: -4,
-  right: -2,
-  fontSize: 'xl',
+  top: -spacing(4),
+  right: -spacing(2),
+  textXL: true,
   '> a': {
-    ml: 1,
-    color: 'gray.400',
+    ml1: true,
+    gray400: true,
   },
 });
 
@@ -49,8 +50,8 @@ const SwiperConfig = ({propName}) => {
             <>
               {fields.map(({key, name}, index) => {
                 return (
-                  <div key={key} css={navItem}>
-                    <div className="toolbar" css={toolbar}>
+                  <div key={key} className={navItemClass}>
+                    <div className={'toolbar ' + toolbarClass}>
                       {index !== 0 && <a href="#" onClick={(e) => {
                         e.preventDefault();
                         move(index, index - 1);

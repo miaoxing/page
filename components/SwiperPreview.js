@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import {css} from '@chakra-ui/react';
 import {Carousel} from 'antd';
 import defaultImage from '../images/default-swiper.svg';
+import {Image} from '@mxjs/box';
 
 const carousel = css({
   '.slick-dots.slick-dots li': {
@@ -27,14 +28,10 @@ const carousel = css({
   },
 });
 
-const img = css({
-  maxWidth: '100%',
-});
-
 const SwiperPreview = ({duration, items = []}) => {
   return (
     <Carousel
-      css={carousel}
+      className={carousel}
       autoplay
       autoplaySpeed={parseInt(duration, 10) || undefined}
       draggable={false}
@@ -42,7 +39,7 @@ const SwiperPreview = ({duration, items = []}) => {
       {items.map((item, i) => {
         return (
           <div key={i}>
-            <img css={img} src={item.image || defaultImage}/>
+            <Image maxW="100%" src={item.image || defaultImage}/>
           </div>
         );
       })}

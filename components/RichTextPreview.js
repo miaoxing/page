@@ -1,5 +1,5 @@
-import {css} from '@mxjs/css';
 import PropTypes from 'prop-types';
+import {css} from '@fower/core';
 
 const contentCss = css({
   minH: '22px', // .ant-form font-size: 14px * line-height: 1.5715
@@ -13,7 +13,7 @@ const contentCss = css({
 
 const RichTextPreview = ({content}) => {
   return (
-    <div css={contentCss} dangerouslySetInnerHTML={{__html: content}}/>
+    <div className={contentCss} dangerouslySetInnerHTML={{__html: content}}/>
   );
 };
 

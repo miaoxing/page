@@ -1,34 +1,28 @@
-import { Fragment, useEffect, useRef } from 'react';
+import {Fragment, useEffect, useRef} from 'react';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {useForm} from '@mxjs/a-form';
-import {css} from '@mxjs/css';
+import {createStyle} from '@fower/core';
 import PropTypes from 'prop-types';
-
-const previewPanel = css({
-  width: 375,
-  height: 600,
-  overflowY: 'auto',
-  border: '1px',
-  borderColor: 'gray.100',
-  boxShadow: 'md',
-});
+import {Box} from '@mxjs/box';
+import {css, cx} from '@emotion/css';
+import {spacing} from '@mxjs/css';
 
 const component = css({
   position: 'relative',
   userSelect: 'none',
   cursor: 'pointer',
-  _hover: {
+  '&:hover': {
     // 使用 ::before 的边框模拟 outline，因为 outline 会被子元素挡住
-    _before: {
+    '&::before': createStyle({
       border: '2px dashed',
       borderColor: 'primary',
-    },
+    }),
     // toolbar
     '> div': {
       display: 'block',
     },
   },
-  _before: {
+  '&::before': {
     content: '""',
     position: 'absolute',
     left: 0,
@@ -41,27 +35,31 @@ const component = css({
 });
 
 const selectedComponent = css({
-  _before: {
+  '&::before': createStyle({
     border: '2px dashed',
     borderColor: 'primary',
-  },
+  }),
 });
 
 const toolbar = css({
-  position: 'absolute',
-  right: 0,
-  top: 0,
-  // 显示在 ::before 之上
-  zIndex: 2,
-  display: 'none',
-  py: 0.5,
-  px: 1,
-  margin: '2px',
-  bg: 'blackAlpha.700',
-  fontSize: 'xs',
+  ...createStyle({
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    // 显示在 ::before 之上
+    zIndex: 2,
+    display: 'none',
+    py: spacing(0.5),
+    px1: true,
+    m: spacing(0.25),
+    // blackAlpha.700
+    bg: 'rgba(0, 0, 0, .64)',
+    textXS: true,
+
+  }),
   '> a': {
     color: 'white',
-    _hover: {
+    ':hover': {
       color: 'white',
     },
   },
@@ -83,13 +81,13 @@ const PreviewItem = ({selected = false, deletable = true, isNew = false, onDelet
   return (
     <div
       ref={ref}
-      css={[component, selected && selectedComponent]}
+      className={cx(component, selected && selectedComponent)}
       {...props}
     >
       <div>
         {children}
       </div>
-      {deletable && <div css={[toolbar, selected && show]}>
+      {deletable && <div className={cx(toolbar, selected && show)}>
         <a href="#" onClick={onDelete}>删除</a>
       </div>}
     </div>
@@ -171,7 +169,7 @@ const EditorPreviewPanel = (
   };
 
   return (
-    <div css={previewPanel}>
+    <Box w={375} h={600} overflowYAuto border borderGray100 shadowSmall>
       <EditorPreviewDragContainer onDragEnd={onDragEnd}>
         {fields.map(({key, name}, index) => {
           // 删除时，pageComponents 还未更新，忽略不存在的值
@@ -215,7 +213,7 @@ const EditorPreviewPanel = (
           );
         })}
       </EditorPreviewDragContainer>
-    </div>
+    </Box>
   );
 };
 

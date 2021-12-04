@@ -20,7 +20,8 @@
     "@mxjs/upload": "^0.5.0",
     "@mxjs/a-color-picker": "^0.2.0",
     "@mxjs/a-input": "^0.1.0",
-    "@mxjs/ueditor": "^0.2.0"
+    "@mxjs/ueditor": "^0.2.0",
+    "@emotion/css": "^11.5.0"
   },
   "devDependencies": {
     "@miaoxing/dev": "^8.0.0",

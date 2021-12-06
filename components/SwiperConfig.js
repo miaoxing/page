@@ -4,9 +4,8 @@ import {FormItem} from '@mxjs/a-form';
 import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import {PlusOutlined, CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
-import {css} from '@fower/core';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
-import {spacing} from '@mxjs/css';
+import {css, spacing} from '@mxjs/css';
 
 const navItemClass = css({
   position: 'relative',

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {css} from '@fower/core';
+import {css} from '@mxjs/css';
 
 const contentCss = css({
   minH: '22px', // .ant-form font-size: 14px * line-height: 1.5715

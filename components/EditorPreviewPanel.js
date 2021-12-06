@@ -1,11 +1,10 @@
 import {Fragment, useEffect, useRef} from 'react';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {useForm} from '@mxjs/a-form';
-import {createStyle} from '@fower/core';
 import PropTypes from 'prop-types';
 import {Box} from '@mxjs/box';
 import {css, cx} from '@emotion/css';
-import {spacing} from '@mxjs/css';
+import {spacing, createStyle} from '@mxjs/css';
 
 const component = css({
   position: 'relative',

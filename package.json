@@ -56,7 +56,8 @@
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",
     "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",
-    "@mxjs/a-table": "miaoxing/mxjs-a-table"
+    "@mxjs/a-table": "miaoxing/mxjs-a-table",
+    "@mxjs/a-input": "miaoxing/mxjs-a-input"
   },
   "jest": {
     "preset": "jest-preset-miaoxing"

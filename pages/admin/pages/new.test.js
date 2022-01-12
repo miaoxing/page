@@ -73,7 +73,7 @@ describe(path, () => {
 
     expect($.http).toHaveBeenCalledTimes(2);
     expect($.http).toMatchSnapshot();
-  });
+  }, 30000);
 
   test('flow', async () => {
     const promise = createPromise();

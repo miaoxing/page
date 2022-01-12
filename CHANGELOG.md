@@ -1,3 +1,43 @@
+# [0.3.0](https://github.com/miaoxing/page/compare/v0.2.0...v0.3.0) (2022-01-12)
+
+
+### Features
+
+* 更新 `antd` 到 `~4.17.4` ([b122fa0](https://github.com/miaoxing/page/commit/b122fa0cef70daccb021707dcf8b944625bb1084))
+* 更新 typescript 到 `^4.5.2` ([18d5685](https://github.com/miaoxing/page/commit/18d5685e2b3d9f77a752c745fff50eee05dc0fea))
+* **page:** 页面配置增加字数限制 ([d06bb7a](https://github.com/miaoxing/page/commit/d06bb7a76dbf426be491eeb61a828af6cc562719))
+
+
+### BREAKING CHANGES
+
+* 更新 typescript 到 `^4.5.2`
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/css:** upgrade from `0.2.3` to `0.3.0`
+* **@mxjs/cur-url:** upgrade from `0.2.13` to `0.2.14`
+* **@mxjs/upload:** upgrade from `0.5.0` to `0.5.1`
+* **@mxjs/a-color-picker:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/a-input:** upgrade from `0.1.0` to `0.1.1`
+* **@mxjs/ueditor:** upgrade from `0.2.0` to `0.2.1`
+* **@miaoxing/dev:** upgrade from `8.0.0` to `8.0.1`
+* **@mxjs/a-clink:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/a-form:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/a-page:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/a-table:** upgrade from `0.4.0` to `0.4.1`
+* **@mxjs/actions:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/api:** upgrade from `0.1.4` to `0.1.5`
+* **@mxjs/app:** upgrade from `0.3.3` to `0.4.0`
+* **@mxjs/test:** upgrade from `0.2.0` to `0.2.1`
+* **jest-preset-miaoxing:** upgrade from `0.2.5` to `0.3.0`
+* **miaoxing:** upgrade from `0.3.0` to `0.4.0`
+* **@miaoxing/app:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/link-to:** upgrade from `0.1.18` to `0.1.19`
+
 # [0.2.0](https://github.com/miaoxing/page/compare/v0.1.3...v0.2.0) (2021-10-28)
 
 

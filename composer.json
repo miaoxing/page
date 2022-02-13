@@ -34,7 +34,7 @@
       "miaoxing/services": "miaoxing/services as 0.4.x-dev",
       "miaoxing/app": "miaoxing/app as 0.5.x-dev",
       "miaoxing/link-to": "miaoxing/link-to as 0.1.x-dev",
-      "wei/wei": "twinh/wei as 0.11.x-dev"
+      "wei/wei": "twinh/wei as 0.12.x-dev",
     }
   }
 }

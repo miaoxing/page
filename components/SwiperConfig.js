@@ -1,11 +1,11 @@
 import {Button, Card, Divider, Form, Input} from 'antd';
 import PropTypes from 'prop-types';
 import {FormItem} from '@mxjs/a-form';
-import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import {PlusOutlined, CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
 import {css, spacing} from '@mxjs/css';
+import {Upload} from '@miaoxing/admin';
 
 const navItemClass = css({
   position: 'relative',
@@ -78,10 +78,7 @@ const SwiperConfig = ({propName}) => {
                     <FormItem name={[name, 'image']} label="图片"
                       extra="建议宽 750px，高不限，较好显示效果是高 350px"
                     >
-                      <Upload
-                        url={$.apiUrl('files', {type: 'image'})}
-                        max={1}
-                      />
+                      <Upload max={1}/>
                     </FormItem>
 
                     <FormItem name={[name, 'link']} label="链接">

@@ -1,10 +1,9 @@
 import {Card, Divider, Radio} from 'antd';
 import {FormItem} from '@mxjs/a-form';
-import Upload from '@mxjs/upload';
-import $ from 'miaoxing';
 import ColorPicker from '@mxjs/a-color-picker';
 import PropTypes from 'prop-types';
 import Input from '@mxjs/a-input';
+import {Upload} from '@miaoxing/admin';
 
 const PageConfig = ({propName}) => {
   return (
@@ -18,7 +17,7 @@ const PageConfig = ({propName}) => {
       </FormItem>
 
       <FormItem name={propName('shareImage')} label="分享图片">
-        <Upload url={$.apiUrl('files', {type: 'image'})} max={1}/>
+        <Upload max={1}/>
       </FormItem>
 
       <Divider/>

@@ -2,11 +2,11 @@ import {Button, Card, Divider, Form, Radio} from 'antd';
 import PropTypes from 'prop-types';
 import ColorPicker from '@mxjs/a-color-picker';
 import {FormItem} from '@mxjs/a-form';
-import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import {PlusOutlined, CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
 import {css, spacing} from '@mxjs/css';
+import {Upload} from '@miaoxing/admin';
 
 const navItemClass = css({
   position: 'relative',
@@ -89,10 +89,7 @@ const NavConfig = ({propName}) => {
                     </div>
 
                     <FormItem name={[name, 'image']} label="图片" extra="宽高 1:1">
-                      <Upload
-                        url={$.apiUrl('files', {type: 'image'})}
-                        max={1}
-                      />
+                      <Upload max={1}/>
                     </FormItem>
 
                     <FormItem name={[name, 'title']} label="文字内容"/>

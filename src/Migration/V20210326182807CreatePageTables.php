@@ -39,7 +39,6 @@ class V20210326182807CreatePageTables extends BaseMigration
      */
     public function down()
     {
-        $this->schema->dropIfExists('pages')
-            ->dropIfExists('page_components');
+        $this->schema->dropIfExists(['pages', 'page_components']);
     }
 }

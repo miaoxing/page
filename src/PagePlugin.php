@@ -2,19 +2,16 @@
 
 namespace Miaoxing\Page;
 
+use Miaoxing\Admin\Service\AdminMenu;
 use Miaoxing\Plugin\BasePlugin;
 
 class PagePlugin extends BasePlugin
 {
     protected $name = '页面';
 
-    public function onAdminNavGetNavs(&$navs, &$categories, &$subCategories)
+    public function onAdminMenuGetMenus(AdminMenu $menu)
     {
-        $subCategories[] = [
-            'parentId' => 'setting',
-            'url' => 'admin/pages',
-            'name' => '页面管理',
-            'sort' => 30,
-        ];
+        $setting = $menu->child('setting');
+        $setting->addChild()->setLabel('页面管理')->setUrl('admin/pages')->setSort(300);
     }
 }

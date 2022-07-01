@@ -1,3 +1,31 @@
+## [0.4.5](https://github.com/miaoxing/page/compare/v0.4.4...v0.4.5) (2022-07-01)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/css:** upgrade from `0.3.3` to `1.0.0`
+* **@mxjs/cur-url:** upgrade from `0.2.19` to `1.0.0`
+* **@mxjs/upload:** upgrade from `0.6.5` to `0.6.6`
+* **@mxjs/a-color-picker:** upgrade from `0.2.3` to `1.0.0`
+* **@mxjs/a-input:** upgrade from `0.1.3` to `1.0.0`
+* **@mxjs/ueditor:** upgrade from `0.2.7` to `0.2.8`
+* **@miaoxing/dev:** upgrade from `8.1.1` to `8.1.2`
+* **@mxjs/a-clink:** upgrade from `0.2.6` to `1.0.0`
+* **@mxjs/a-form:** upgrade from `0.3.7` to `1.0.0`
+* **@mxjs/a-page:** upgrade from `0.3.7` to `1.0.0`
+* **@mxjs/a-table:** upgrade from `0.4.6` to `1.0.0`
+* **@mxjs/actions:** upgrade from `0.2.3` to `0.2.4`
+* **@mxjs/api:** upgrade from `0.1.10` to `1.0.0`
+* **@mxjs/app:** upgrade from `0.5.1` to `0.5.2`
+* **@mxjs/test:** upgrade from `0.2.6` to `1.0.0`
+* **miaoxing:** upgrade from `0.4.2` to `0.4.3`
+* **@miaoxing/admin:** upgrade from `0.7.3` to `0.8.0`
+* **@miaoxing/app:** upgrade from `0.6.4` to `0.6.5`
+* **@miaoxing/link-to:** upgrade from `0.1.26` to `0.1.27`
+
 ## [0.4.4](https://github.com/miaoxing/page/compare/v0.4.3...v0.4.4) (2022-06-06)
 
 

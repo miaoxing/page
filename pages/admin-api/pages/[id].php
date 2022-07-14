@@ -21,15 +21,13 @@ class () extends BaseController {
         return UpdateAction
             ::setReq($this->objectReq)
             ->beforeSave(function (PageModel $page, $req) {
-                return V::defaultOptional()
-                    ->tinyChar('name', '名称')->required($page->isNew())->notBlank()
-                    ->array('components', '组件')->required($page->isNew())
-                    ->each(function (V $v) {
-                        $v
-                            ->string('type', '类型')
-                            ->object('props', '属性');
-                    })
-                    ->check($req);
+                $v = V::defaultOptional();
+                $v->tinyChar('name', '名称')->required($page->isNew())->notBlank();
+                $v->array('components', '组件')->required($page->isNew())->each(function (V $v) {
+                    $v->string('type', '类型');
+                    $v->object('props', '属性');
+                });
+                return $v->check($req);
             })
             ->afterSave(function (PageModel $page, $req) {
                 if ($req['components']) {

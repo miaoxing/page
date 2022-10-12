@@ -24,8 +24,8 @@ class () extends BaseController {
                 $v = V::defaultOptional();
                 $v->tinyChar('name', '名称')->required($page->isNew())->notBlank();
                 $v->array('components', '组件')->required($page->isNew())->each(function (V $v) {
-                    $v->string('type', '类型');
-                    $v->object('props', '属性');
+                    $v->maxLength('type', '类型', 32);
+                    $v->object('props', '属性', 1024 * 1024 * 16);
                 });
                 return $v->check($req);
             })

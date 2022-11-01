@@ -1,3 +1,25 @@
+## [0.4.10](https://github.com/miaoxing/page/compare/v0.4.9...v0.4.10) (2022-11-01)
+
+
+### Bug Fixes
+
+* 增加对象的长度检查 ([a1cedcc](https://github.com/miaoxing/page/commit/a1cedcc3ab74ccdc7e5d032fd4748d4290835ea5))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/upload:** upgrade from `0.6.9` to `0.6.10`
+* **@mxjs/ueditor:** upgrade from `0.2.11` to `0.2.12`
+* **@mxjs/a-clink:** upgrade from `1.0.1` to `1.1.0`
+* **@mxjs/a-form:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-table:** upgrade from `1.1.0` to `1.1.1`
+* **@miaoxing/admin:** upgrade from `0.9.2` to `0.9.3`
+* **@miaoxing/app:** upgrade from `0.6.9` to `0.6.10`
+* **@miaoxing/link-to:** upgrade from `0.1.31` to `0.1.32`
+
 ## [0.4.9](https://github.com/miaoxing/page/compare/v0.4.8...v0.4.9) (2022-09-30)
 
 

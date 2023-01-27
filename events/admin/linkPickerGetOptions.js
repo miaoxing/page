@@ -13,18 +13,18 @@ const PagePicker = ({pickerRef, linkPicker, value}) => {
   const [table] = useTable();
   const [id, setId] = useState(value.id);
   const [name, setName] = useState();
-  const [visible, setVisible] = useState(true);
+  const [open, setOpen] = useState(true);
 
   // 每次都更新
   pickerRef && (pickerRef.current = {
     show: () => {
-      setVisible(true);
+      setOpen(true);
     },
   });
 
   return <Modal
     title="选择页面"
-    visible={visible}
+    open={open}
     width={800}
     bodyStyle={{
       padding: '1rem',
@@ -33,10 +33,10 @@ const PagePicker = ({pickerRef, linkPicker, value}) => {
       if (id) {
         linkPicker.addValue({id}, {name});
       }
-      setVisible(false);
+      setOpen(false);
     }}
     onCancel={() => {
-      setVisible(false);
+      setOpen(false);
     }}
   >
     <TableProvider>

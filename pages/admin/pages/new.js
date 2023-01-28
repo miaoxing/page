@@ -135,16 +135,18 @@ const New = () => {
         <PageActions toBetween>
           <CListBtn/>
 
-          <Dropdown.Button
-            type="primary"
-            htmlType="submit"
-            menu={{items}}
-            onClick={() => {
-              setRedirect(!form.current.getFieldValue('id'));
-            }}
-          >
-            保存
-          </Dropdown.Button>
+          <div>
+            <Dropdown.Button
+              type="primary"
+              htmlType="submit"
+              menu={{items}}
+              onClick={() => {
+                setRedirect(!form.current.getFieldValue('id'));
+              }}
+            >
+              保存
+            </Dropdown.Button>
+          </div>
         </PageActions>
 
         <AntdForm.List name="components">

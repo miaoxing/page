@@ -5,7 +5,7 @@ import {useEffect, useRef, useState} from 'react';
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form} from '@mxjs/a-form';
-import {Col, Row, Form as AntdForm, Dropdown, Menu} from 'antd';
+import {Col, Row, Form as AntdForm, Dropdown} from 'antd';
 import curUrl from '@mxjs/cur-url';
 import {event} from '@mxjs/app';
 import EditorComponentPanel from '../../../components/EditorComponentPanel';
@@ -72,6 +72,17 @@ const New = () => {
     return componentsRef.current[type].default || {};
   };
 
+  const items = [
+    {
+      key: 1,
+      label: '保存并返回',
+      onClick: () => {
+        setRedirect(true);
+        form.current.submit();
+      },
+    },
+  ];
+
   return (
     <Page>
       <Form
@@ -127,16 +138,7 @@ const New = () => {
           <Dropdown.Button
             type="primary"
             htmlType="submit"
-            overlay={
-              <Menu>
-                <Menu.Item onClick={() => {
-                  setRedirect(true);
-                  form.current.submit();
-                }}>
-                  保存并返回
-                </Menu.Item>
-              </Menu>
-            }
+            menu={{items}}
             onClick={() => {
               setRedirect(!form.current.getFieldValue('id'));
             }}

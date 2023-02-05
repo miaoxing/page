@@ -12,6 +12,9 @@ class PagePlugin extends BasePlugin
     public function onAdminMenuGetMenus(AdminMenu $menu)
     {
         $setting = $menu->child('setting');
-        $setting->addChild()->setLabel('页面管理')->setUrl('admin/pages')->setSort(300);
+
+        $pages = $setting->addChild()->setLabel('页面管理')->setUrl('admin/pages')->setSort(300);
+        $pages->addChild()->setUrl('admin/pages/new')->setLabel('添加');
+        $pages->addChild()->setUrl('admin/pages/[id]/edit')->setLabel('编辑');
     }
 }

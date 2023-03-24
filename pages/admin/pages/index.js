@@ -1,7 +1,6 @@
-import {CTableDeleteLink, Table, TableProvider, useTable} from '@mxjs/a-table';
+import {CTableDeleteLink, Table, TableActions, TableProvider, useTable} from '@mxjs/a-table';
 import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
-import {LinkActions} from '@mxjs/actions';
 import {Tag} from 'antd';
 import api from '@mxjs/api';
 import $ from 'miaoxing';
@@ -47,7 +46,7 @@ const Index = () => {
               title: '操作',
               dataIndex: 'id',
               render: (id, data) => (
-                <LinkActions>
+                <TableActions>
                   {data.type === 1 && <a href="#" onClick={async (e) => {
                     e.preventDefault();
                     const {ret} = await api.put('pages/index', {data:{id}});
@@ -56,7 +55,7 @@ const Index = () => {
                   }}>设为首页</a>}
                   <CEditLink id={id}/>
                   <CTableDeleteLink id={id}/>
-                </LinkActions>
+                </TableActions>
               ),
             },
           ]}

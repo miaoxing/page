@@ -1,6 +1,6 @@
 <?php
 
-namespace MiaoxingTest\Page\Pages\AdminApi\Pages;
+namespace MiaoxingTest\Page\Pages\Api\Admin\Pages;
 
 use Miaoxing\Page\Service\PageModel;
 use Miaoxing\Plugin\Service\Tester;

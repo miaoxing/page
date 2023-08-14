@@ -1,7 +1,7 @@
 <?php
 
 use Miaoxing\Page\Service\PageModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\ItemTrait;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\V;
@@ -9,7 +9,7 @@ use Wei\V;
 return new /**
  * @mixin \ObjectReqMixin
  */
-class () extends BaseController {
+class () extends BasePage {
     use ItemTrait;
 
     protected $include = [

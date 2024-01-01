@@ -22,7 +22,7 @@ class PagePlugin extends BasePlugin
 
     public function onPermissionGetMap(PermissionMap $map)
     {
-        $map->prefix('admin/pages', function (PermissionMap $map) {
+        $map->prefix('admin/pages', static function (PermissionMap $map) {
             $map->addList('', [
                 'PUT api/admin/pages/index',
             ]);

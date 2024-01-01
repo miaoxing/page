@@ -18,18 +18,17 @@ class () extends BasePage {
 
     public function patch()
     {
-        return UpdateAction
-            ::setReq($this->objectReq)
-            ->beforeSave(function (PageModel $page, $req) {
+        return UpdateAction::setReq($this->objectReq)
+            ->beforeSave(static function (PageModel $page, $req) {
                 $v = V::defaultOptional();
                 $v->tinyChar('name', '名称')->required($page->isNew())->notBlank();
-                $v->array('components', '组件')->required($page->isNew())->each(function (V $v) {
+                $v->array('components', '组件')->required($page->isNew())->each(static function (V $v) {
                     $v->maxLength('type', '类型', 32);
                     $v->object('props', '属性', 1024 * 1024 * 16);
                 });
                 return $v->check($req);
             })
-            ->afterSave(function (PageModel $page, $req) {
+            ->afterSave(static function (PageModel $page, $req) {
                 if ($req['components']) {
                     $page->components()->saveRelation($req['components']);
                 }

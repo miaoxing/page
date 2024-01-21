@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {css} from '@chakra-ui/react';
 import {Carousel} from 'antd';
 import defaultImage from '../images/default-swiper.svg';
-import {Image} from '@mxjs/box';
+import {Image} from '@mxjs/a-box';
 
 const carousel = css({
   '.slick-dots.slick-dots li': {

@@ -132,7 +132,7 @@ const New = () => {
           ret.isSuc() && form.setFieldsValue(ret.data);
         }}
       >
-        <PageActions toBetween>
+        <PageActions display="flex" justifyContent="space-between">
           <CListBtn/>
 
           <div>

@@ -2,7 +2,7 @@ import {Fragment, useEffect, useRef} from 'react';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {useForm} from '@mxjs/a-form';
 import PropTypes from 'prop-types';
-import {Box} from '@mxjs/box';
+import {Box} from '@mxjs/a-box';
 import {css, cx} from '@emotion/css';
 import {spacing, createStyle} from '@mxjs/css';
 
@@ -168,7 +168,7 @@ const EditorPreviewPanel = (
   };
 
   return (
-    <Box w={375} h={600} overflowYAuto border borderGray100 shadowSmall>
+    <Box w={375} h={600} overflowY="auto" border="1px solid" borderColor="gray.100" boxShadow="sm">
       <EditorPreviewDragContainer onDragEnd={onDragEnd}>
         {fields.map(({key, name}, index) => {
           // 删除时，pageComponents 还未更新，忽略不存在的值

@@ -11,7 +11,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@mxjs/css": "^1.1.6",
     "@mxjs/cur-url": "^1.0.10",
     "color": "^3.1.2",
     "lodash": "^4.17.20",
@@ -51,7 +50,6 @@
     "@mxjs/a-page": "miaoxing/mxjs-a-page",
     "@mxjs/app": "miaoxing/mxjs-app",
     "@mxjs/a-box": "miaoxing/mxjs-a-box",
-    "@mxjs/css": "miaoxing/mxjs-css",
     "@mxjs/upload": "miaoxing/mxjs-upload",
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",

@@ -1,72 +1,26 @@
-import {Fragment, useEffect, useRef} from 'react';
-import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
-import {useForm} from '@mxjs/a-form';
+import { Fragment, useEffect, useRef } from 'react';
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
+import { useForm } from '@mxjs/a-form';
 import PropTypes from 'prop-types';
-import {Box} from '@mxjs/a-box';
-import {css, cx} from '@emotion/css';
-import {spacing, createStyle} from '@mxjs/css';
+import { Box } from '@mxjs/a-box';
 
-const component = css({
-  position: 'relative',
-  userSelect: 'none',
-  cursor: 'pointer',
-  '&:hover': {
-    // 使用 ::before 的边框模拟 outline，因为 outline 会被子元素挡住
-    '&::before': createStyle({
-      border: '2px dashed',
-      borderColor: 'primary',
-    }),
-    // toolbar
-    '> div': {
-      display: 'block',
-    },
-  },
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    // 如果内容有图片，显示在图片上面
-    zIndex: 1,
-  },
-});
+const Toolbar = ({selected, children, ...rest}) => {
+  return (
+    <Box
+      position="absolute" right={0} top={0} zIndex={2}
+      px={1} bg="blackAlpha.700" fontSize="xs"
+      display={selected ? 'block' : 'none'}
+      {...rest}
+    >
+      {children}
+    </Box>
+  );
+};
 
-const selectedComponent = css({
-  '&::before': createStyle({
-    border: '2px dashed',
-    borderColor: 'primary',
-  }),
-});
-
-const toolbar = css({
-  ...createStyle({
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    // 显示在 ::before 之上
-    zIndex: 2,
-    display: 'none',
-    py: spacing(0.5),
-    px1: true,
-    m: spacing(0.25),
-    // blackAlpha.700
-    bg: 'rgba(0, 0, 0, .64)',
-    textXS: true,
-
-  }),
-  '> a': {
-    color: 'white',
-    ':hover': {
-      color: 'white',
-    },
-  },
-});
-
-const show = css({
-  display: 'block',
-});
+Toolbar.propTypes = {
+  selected: PropTypes.bool,
+  children: PropTypes.node,
+};
 
 const PreviewItem = ({selected = false, deletable = true, isNew = false, onDelete, children, ...props}) => {
   const ref = useRef(null);
@@ -78,18 +32,41 @@ const PreviewItem = ({selected = false, deletable = true, isNew = false, onDelet
   }, []);
 
   return (
-    <div
+    <Box
       ref={ref}
-      className={cx(component, selected && selectedComponent)}
+      position="relative" userSelect="none" cursor="pointer"
+      _before={{
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        // 如果内容有图片，显示在图片上面
+        zIndex: 1,
+        border: '2px dashed',
+        borderColor: selected ? 'primary' : 'transparent',
+      }}
+      _hover={{
+        // 使用 ::before 的边框模拟 outline，因为 outline 会被子元素挡住
+        _before: {
+          border: '2px dashed',
+          borderColor: 'primary',
+        },
+        // toolbar
+        '> div': {
+          display: 'block',
+        },
+      }}
       {...props}
     >
       <div>
         {children}
       </div>
-      {deletable && <div className={cx(toolbar, selected && show)}>
-        <a href="#" onClick={onDelete}>删除</a>
-      </div>}
-    </div>
+      {deletable && <Toolbar selected={selected}>
+        <Box as="a" color="white" _hover={{color: 'white'}} href="#" onClick={onDelete}>删除</Box>
+      </Toolbar>}
+    </Box>
   );
 };
 
@@ -227,3 +204,4 @@ EditorPreviewPanel.propTypes = {
 };
 
 export default EditorPreviewPanel;
+

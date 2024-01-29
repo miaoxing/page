@@ -1,39 +1,11 @@
-import {Button, Card, Divider, Form, Radio} from 'antd';
+import { Button, Card, Divider, Form, Radio } from 'antd';
 import PropTypes from 'prop-types';
 import ColorPicker from '@mxjs/a-color-picker';
-import {FormItem} from '@mxjs/a-form';
-import $ from 'miaoxing';
-import {PlusOutlined, CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
+import { FormItem } from '@mxjs/a-form';
+import { PlusOutlined } from '@ant-design/icons';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
-import {css, spacing} from '@mxjs/css';
-import {Upload} from '@miaoxing/admin';
-
-const navItemClass = css({
-  position: 'relative',
-  mb4: true,
-  px6: true,
-  pt6: true,
-  shadowTiny: true,
-  border: 1,
-  borderColor: 'gray100',
-  ':hover': {
-    '> .toolbar': {
-      display: 'block',
-    },
-  },
-});
-
-const toolbarClass = css({
-  display: 'none',
-  position: 'absolute',
-  top: -spacing(4),
-  right: -spacing(2),
-  textXL: true,
-  '> a': {
-    ml1: true,
-    gray400: true,
-  },
-});
+import { Upload } from '@miaoxing/admin';
+import ConfigItem from './ConfigItem';
 
 const NavConfig = ({propName}) => {
   return (
@@ -57,37 +29,12 @@ const NavConfig = ({propName}) => {
       <Divider/>
 
       <Form.List name={propName('items')}>
-        {(fields, {add, remove, move}) => {
+        {(fields, operation) => {
           return (
             <>
               {fields.map(({key, name}, index) => {
                 return (
-                  <div key={key} className={navItemClass}>
-                    <div className={'toolbar ' + toolbarClass}>
-                      {index !== 0 && <a href="#" onClick={(e) => {
-                        e.preventDefault();
-                        move(index, index - 1);
-                      }}>
-                        <UpCircleFilled/>
-                      </a>}
-                      {index !== fields.length - 1 && <a href="#" onClick={(e) => {
-                        e.preventDefault();
-                        move(index, index + 1);
-                      }}>
-                        <DownCircleFilled/>
-                      </a>}
-                      <a href="#" onClick={(e) => {
-                        e.preventDefault();
-                        $.confirm('删除后不能还原，确认删除？', result => {
-                          if (result) {
-                            remove(index);
-                          }
-                        });
-                      }}>
-                        <CloseCircleFilled/>
-                      </a>
-                    </div>
-
+                  <ConfigItem key={key} index={index} length={fields.length} operation={operation}>
                     <FormItem name={[name, 'image']} label="图片" extra="宽高 1:1">
                       <Upload max={1}/>
                     </FormItem>
@@ -97,11 +44,11 @@ const NavConfig = ({propName}) => {
                     <FormItem name={[name, 'link']} label="链接">
                       <LinkPicker/>
                     </FormItem>
-                  </div>
+                  </ConfigItem>
                 );
               })}
               <Button block type="dashed" onClick={() => {
-                add({
+                operation.add({
                   title: '导航' + (fields.length + 1),
                 });
               }}>

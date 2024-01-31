@@ -1,3 +1,40 @@
+# [0.5.0](https://github.com/miaoxing/page/compare/v0.4.27...v0.5.0) (2024-01-31)
+
+
+### Bug Fixes
+
+* **page:** 使用 `emotion` 才能生成 css ([c9c78e0](https://github.com/miaoxing/page/commit/c9c78e0b51ce92a9dcffe9055d74b3b7d1b03190))
+
+
+### Features
+
+* **loading:** 更新 box 组件为 chakra-ui ([1495049](https://github.com/miaoxing/page/commit/149504939234871dea8b6b83528950cccc3fde8e))
+* 更新 `react` 支持 18 ([dc9535d](https://github.com/miaoxing/page/commit/dc9535db984a898ad0241ac8f9965882f530904b))
+
+
+### BREAKING CHANGES
+
+* **loading:** 更新 box 组件为 chakra-ui
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/upload:** upgrade from `0.6.26` to `0.6.27`
+* **@mxjs/a-color-picker:** upgrade from `1.0.8` to `1.1.0`
+* **@mxjs/a-input:** upgrade from `1.3.3` to `1.4.0`
+* **@mxjs/ueditor:** upgrade from `0.2.28` to `0.2.29`
+* **@mxjs/a-clink:** upgrade from `2.0.5` to `2.1.0`
+* **@mxjs/a-form:** upgrade from `2.0.3` to `2.1.0`
+* **@mxjs/a-page:** upgrade from `2.2.3` to `2.3.0`
+* **@mxjs/a-table:** upgrade from `1.6.3` to `1.7.0`
+* **@mxjs/actions:** upgrade from `0.2.16` to `0.2.17`
+* **@miaoxing/admin:** upgrade from `0.11.5` to `0.12.0`
+* **@miaoxing/app:** upgrade from `0.7.11` to `0.8.0`
+* **@miaoxing/link-to:** upgrade from `0.1.47` to `0.1.48`
+
 ## [0.4.27](https://github.com/miaoxing/page/compare/v0.4.26...v0.4.27) (2024-01-08)
 
 

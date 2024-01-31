@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {css} from '@chakra-ui/react';
+import {css} from '@emotion/css';
 import {Carousel} from 'antd';
 import defaultImage from '../images/default-swiper.svg';
 import {Image} from '@mxjs/a-box';

@@ -28,7 +28,6 @@
     "@mxjs/a-form": "^2.1.0",
     "@mxjs/a-page": "^2.3.0",
     "@mxjs/a-table": "^1.7.0",
-    "@mxjs/actions": "^0.2.17",
     "@mxjs/api": "^1.0.10",
     "@mxjs/app": "^0.6.5",
     "@mxjs/test": "^1.0.10",

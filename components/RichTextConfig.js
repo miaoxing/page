@@ -1,5 +1,5 @@
 import {Card} from 'antd';
-import {FormUeditor} from '@mxjs/ueditor';
+import {FormUeditor} from '@mxjs/a-ueditor';
 import PropTypes from 'prop-types';
 
 const RichTextConfig = ({propName}) => {

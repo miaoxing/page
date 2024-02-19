@@ -19,7 +19,7 @@
     "@mxjs/upload": "^0.6.27",
     "@mxjs/a-color-picker": "^1.1.0",
     "@mxjs/a-input": "^1.4.0",
-    "@mxjs/ueditor": "^0.2.29",
+    "@mxjs/a-ueditor": "^1.0.0",
     "@emotion/css": "^11.5.0"
   },
   "devDependencies": {

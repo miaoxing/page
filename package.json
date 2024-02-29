@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/page",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": true,
   "repository": "https://github.com/miaoxing/page",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "@miaoxing/dev": "^9.1.0",
     "@mxjs/a-clink": "^2.1.1",
     "@mxjs/a-form": "^2.2.0",
-    "@mxjs/a-page": "^2.4.0",
+    "@mxjs/a-page": "^2.4.1",
     "@mxjs/a-table": "^1.8.0",
     "@mxjs/api": "^1.0.10",
     "@mxjs/app": "^0.6.5",

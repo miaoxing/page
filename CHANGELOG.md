@@ -1,3 +1,16 @@
+## [0.5.2](https://github.com/miaoxing/page/compare/v0.5.1...v0.5.2) (2024-02-29)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `2.4.0` to `2.4.1`
+* **@miaoxing/admin:** upgrade from `0.12.1` to `0.12.2`
+* **@miaoxing/app:** upgrade from `0.8.1` to `0.8.2`
+* **@miaoxing/link-to:** upgrade from `0.1.49` to `0.1.50`
+
 ## [0.5.1](https://github.com/miaoxing/page/compare/v0.5.0...v0.5.1) (2024-02-20)
 
 

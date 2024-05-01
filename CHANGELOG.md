@@ -1,3 +1,35 @@
+# [0.6.0](https://github.com/miaoxing/page/compare/v0.5.3...v0.6.0) (2024-05-01)
+
+
+### Features
+
+* 更新 `react-router` 到 v6 ([2f4882d](https://github.com/miaoxing/page/commit/2f4882d1f0736e566075c4454d8b9751f540c1ed))
+
+
+### BREAKING CHANGES
+
+* 更新 `react-router` 到 v6
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/cur-url:** upgrade from `1.0.11` to `1.0.12`
+* **@mxjs/a-ueditor:** upgrade from `1.1.2` to `1.1.3`
+* **@mxjs/a-clink:** upgrade from `2.1.2` to `3.0.0`
+* **@mxjs/a-form:** upgrade from `2.2.1` to `3.0.0`
+* **@mxjs/a-page:** upgrade from `2.5.0` to `3.0.0`
+* **@mxjs/a-table:** upgrade from `1.8.1` to `1.8.2`
+* **@mxjs/api:** upgrade from `1.0.11` to `1.0.12`
+* **@mxjs/app:** upgrade from `0.6.6` to `0.7.0`
+* **@mxjs/test:** upgrade from `1.0.11` to `1.1.0`
+* **miaoxing:** upgrade from `0.4.13` to `0.4.14`
+* **@miaoxing/admin:** upgrade from `0.12.3` to `0.13.0`
+* **@miaoxing/app:** upgrade from `0.8.3` to `0.9.0`
+* **@miaoxing/link-to:** upgrade from `0.1.51` to `0.1.52`
+
 ## [0.5.3](https://github.com/miaoxing/page/compare/v0.5.2...v0.5.3) (2024-03-31)
 
 

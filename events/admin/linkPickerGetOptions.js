@@ -53,7 +53,7 @@ const PagePicker = ({pickerRef, linkPicker, value}) => {
       </SearchForm>
       <Table
         tableApi={table}
-        url={$.apiUrl('pages')}
+        url="pages"
         rowSelection={{
           type: 'radio',
           onChange: (selectedRowKeys, selectedRows) => {

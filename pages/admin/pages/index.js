@@ -2,7 +2,6 @@ import {CTableDeleteLink, Table, TableActions, TableProvider, useTable} from '@m
 import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Tag} from 'antd';
-import api from '@mxjs/api';
 import $ from 'miaoxing';
 
 const types = {
@@ -49,7 +48,7 @@ const Index = () => {
                 <TableActions>
                   {data.type === 1 && <a href="#" onClick={async (e) => {
                     e.preventDefault();
-                    const {ret} = await api.put('pages/index', {data:{id}});
+                    const {ret} = await $.put('pages/index', {data:{id}});
                     $.ret(ret);
                     table.reload();
                   }}>设为首页</a>}

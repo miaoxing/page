@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
 import {Button, Modal} from 'antd';
-import api from '@mxjs/api';
 import {Table, TableProvider, useTable} from '@mxjs/a-table';
 import {SearchForm, SearchItem} from '@mxjs/a-form';
 import {PageActions} from '@mxjs/a-page';
@@ -94,7 +93,7 @@ const PagePickerLabel = ({value, extra}) => {
   useEffect(() => {
     if (!extra.name) {
       (async () => {
-        const {ret} = await api.get('pages/' + value.id);
+        const {ret} = await $.get('pages/' + value.id);
         setName(ret.data.name);
       })();
     }

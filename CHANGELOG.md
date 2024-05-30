@@ -1,3 +1,32 @@
+## [0.6.1](https://github.com/miaoxing/page/compare/v0.6.0...v0.6.1) (2024-05-30)
+
+
+### Features
+
+* **app:** `RouterStore `增加 `location` 变量 ([31adc9d](https://github.com/miaoxing/page/commit/31adc9d2ae71d9c026b5279e08d045a8f0e452b1))
+* `api.xxx` 调用改为 `$.xx` ([9f22733](https://github.com/miaoxing/page/commit/9f22733d57cacbdc22254785611fb49894194b4e))
+* 简化接口地址 ([1d70b45](https://github.com/miaoxing/page/commit/1d70b453c13d833801e619caf768a51b590ad37e))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/cur-url:** upgrade from `1.0.12` to `1.0.13`
+* **@mxjs/a-ueditor:** upgrade from `1.1.3` to `1.1.4`
+* **@mxjs/a-clink:** upgrade from `3.0.0` to `3.0.1`
+* **@mxjs/a-form:** upgrade from `3.0.0` to `3.0.1`
+* **@mxjs/a-page:** upgrade from `3.0.0` to `3.0.1`
+* **@mxjs/a-table:** upgrade from `1.8.2` to `1.8.3`
+* **@mxjs/api:** upgrade from `1.0.12` to `1.1.0`
+* **@mxjs/app:** upgrade from `0.7.0` to `0.8.0`
+* **@mxjs/test:** upgrade from `1.1.0` to `2.0.0`
+* **miaoxing:** upgrade from `0.4.14` to `0.4.15`
+* **@miaoxing/admin:** upgrade from `0.13.0` to `0.13.1`
+* **@miaoxing/app:** upgrade from `0.9.0` to `0.10.0`
+* **@miaoxing/link-to:** upgrade from `0.1.52` to `0.1.53`
+
 # [0.6.0](https://github.com/miaoxing/page/compare/v0.5.3...v0.6.0) (2024-05-01)
 
 

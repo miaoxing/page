@@ -3,7 +3,6 @@
 
 ### Features
 
-* **app:** `RouterStore `增加 `location` 变量 ([31adc9d](https://github.com/miaoxing/page/commit/31adc9d2ae71d9c026b5279e08d045a8f0e452b1))
 * `api.xxx` 调用改为 `$.xx` ([9f22733](https://github.com/miaoxing/page/commit/9f22733d57cacbdc22254785611fb49894194b4e))
 * 简化接口地址 ([1d70b45](https://github.com/miaoxing/page/commit/1d70b453c13d833801e619caf768a51b590ad37e))
 

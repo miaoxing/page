@@ -6,7 +6,7 @@ exports[`admin/pages index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/api/defaults?page=1&limit=20",
+        "url": "/api/admin/pages?page=1&limit=20",
       },
     ],
   ],
@@ -28,7 +28,7 @@ exports[`admin/pages set index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/api/defaults?page=1&limit=20",
+        "url": "/api/admin/pages?page=1&limit=20",
       },
     ],
     Array [
@@ -37,13 +37,13 @@ exports[`admin/pages set index 1`] = `
           "id": 1,
         },
         "method": "put",
-        "url": "pages/index",
+        "url": "/api/admin/pages/index",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/api/defaults?page=1&limit=20",
+        "url": "/api/admin/pages?page=1&limit=20",
       },
     ],
   ],

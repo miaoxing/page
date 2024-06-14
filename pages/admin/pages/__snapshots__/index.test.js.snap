@@ -37,7 +37,7 @@ exports[`admin/pages set index 1`] = `
           "id": 1,
         },
         "method": "put",
-        "url": "/api/admin/pages/index",
+        "url": "pages/index",
       },
     ],
     Array [

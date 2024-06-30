@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/page",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
   "repository": "https://github.com/miaoxing/page",
   "license": "MIT",
@@ -18,15 +18,15 @@
     "prop-types": "^15.7.2",
     "@mxjs/a-color-picker": "^1.1.1",
     "@mxjs/a-input": "^1.5.1",
-    "@mxjs/a-ueditor": "^1.1.4",
+    "@mxjs/a-ueditor": "^1.1.5",
     "@emotion/css": "^11.5.0"
   },
   "devDependencies": {
     "@miaoxing/dev": "^9.1.1",
     "@mxjs/a-clink": "^3.0.1",
-    "@mxjs/a-form": "^3.0.1",
+    "@mxjs/a-form": "^3.0.2",
     "@mxjs/a-page": "^3.0.1",
-    "@mxjs/a-table": "^1.8.3",
+    "@mxjs/a-table": "^1.9.0",
     "@mxjs/api": "^1.1.0",
     "@mxjs/app": "^0.8.0",
     "@mxjs/test": "^2.0.0",

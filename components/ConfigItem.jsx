@@ -1,15 +1,12 @@
 import $ from 'miaoxing';
-import { Box } from '@mxjs/a-box';
 import { CloseCircleFilled, DownCircleFilled, UpCircleFilled } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
 const Toolbar = ({children}) => {
   return (
-    <Box
-      display="none" position="absolute" top={-4} right={-2} fontSize="xl"
-    >
+    <div className="hidden group-hover:block absolute -top-4 -right-2 text-xl">
       {children}
-    </Box>
+    </div>
   );
 };
 
@@ -19,7 +16,7 @@ Toolbar.propTypes = {
 
 const Operation = ({children, ...rest}) => {
   return (
-    <Box as="a" ml={1} color="gray.400" href="#" {...rest}>{children}</Box>
+    <a className="ml-1 text-gray-400" href="#" {...rest}>{children}</a>
   );
 };
 
@@ -29,14 +26,7 @@ Operation.propTypes = {
 
 const ConfigItem = ({index, length, operation, children}) => {
   return (
-    <Box
-      position="relative" mb={4} p={6} border="1px" borderColor="gray.100"
-      _hover={{
-        '> :first-of-type': {
-          display: 'block',
-        },
-      }}
-    >
+    <div className="group relative mb-4 p-6 border border-gray-100">
       <Toolbar>
         {index !== 0 && <Operation onClick={(e) => {
           e.preventDefault();
@@ -62,7 +52,7 @@ const ConfigItem = ({index, length, operation, children}) => {
         </Operation>
       </Toolbar>
       {children}
-    </Box>
+    </div>
   );
 };
 

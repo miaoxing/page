@@ -2,7 +2,6 @@ import { Card, Slider, Input, Row, Col, Radio } from 'antd';
 import PropTypes from 'prop-types';
 import ColorPicker from '@mxjs/a-color-picker';
 import { FormItem } from '@mxjs/a-form';
-import { Box } from '@mxjs/a-box';
 
 const IntegerStep = (props) => {
   let value = parseInt(props.value, 10);
@@ -27,14 +26,7 @@ const IntegerStep = (props) => {
         />
       </Col>
       <Col span={6}>
-        <Box
-          as={Input}
-          textAlign="center"
-          value={value}
-          onChange={(e) => {
-            props.onChange(e);
-          }}
-        />
+        <Input className="text-center" value={value} onChange={props.onChange}/>
       </Col>
     </Row>
   );

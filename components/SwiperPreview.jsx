@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import {css} from '@emotion/css';
 import {Carousel} from 'antd';
 import defaultImage from '../images/default-swiper.svg';
-import {Image} from '@mxjs/a-box';
 
 const carousel = css({
   '.slick-dots.slick-dots li': {
@@ -39,7 +38,7 @@ const SwiperPreview = ({duration, items = []}) => {
       {items.map((item, i) => {
         return (
           <div key={i}>
-            <Image maxW="100%" src={item.image || defaultImage}/>
+            <img className="max-w-full" src={item.image || defaultImage}/>
           </div>
         );
       })}

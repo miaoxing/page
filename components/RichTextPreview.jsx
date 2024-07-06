@@ -1,18 +1,9 @@
 import PropTypes from 'prop-types';
-import { Box } from '@mxjs/a-box';
 
 const RichTextPreview = ({content}) => {
   return (
-    <Box
-      minH="22px" // .ant-form font-size: 14px * line-height: 1.5715
-      sx={{
-        '> p': {
-          mb: 0,
-        },
-        img: {
-          maxWidth: '100%',
-        },
-      }}
+    <div
+      className="min-h-[22px] [&>p]:mb-0 [&_img]:max-w-full"
       dangerouslySetInnerHTML={{__html: content}}
     />
   );

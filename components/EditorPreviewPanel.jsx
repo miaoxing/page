@@ -2,18 +2,12 @@ import { Fragment, useEffect, useRef } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { useForm } from '@mxjs/a-form';
 import PropTypes from 'prop-types';
-import { Box } from '@mxjs/a-box';
 
-const Toolbar = ({selected, children, ...rest}) => {
+const Toolbar = ({ selected, children, ...rest }) => {
   return (
-    <Box
-      position="absolute" right={0} top={0} zIndex={2}
-      px={1} bg="blackAlpha.700" fontSize="xs"
-      display={selected ? 'block' : 'none'}
-      {...rest}
-    >
+    <div hidden={!selected} className="absolute right-0 top-0 z-10 px-1 bg-black/50 text-xs"  {...rest}>
       {children}
-    </Box>
+    </div>
   );
 };
 
@@ -22,51 +16,39 @@ Toolbar.propTypes = {
   children: PropTypes.node,
 };
 
-const PreviewItem = ({selected = false, deletable = true, isNew = false, onDelete, children, ...props}) => {
+const PreviewItem = ({ selected = false, deletable = true, isNew = false, onDelete, children, ...props }) => {
   const ref = useRef(null);
 
   useEffect(() => {
     if (isNew) {
-      ref.current.scrollIntoView({behavior: 'smooth'});
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
 
   return (
-    <Box
+    <div
       ref={ref}
-      position="relative" userSelect="none" cursor="pointer"
-      _before={{
-        content: '""',
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
+      className={[
+        "relative select-none cursor-pointer",
+        "before:content-[''] before:absolute before:inset-0 before:border-2 before:border-dashed",
         // 如果内容有图片，显示在图片上面
-        zIndex: 1,
-        border: '2px dashed',
-        borderColor: selected ? 'primary' : 'transparent',
-      }}
-      _hover={{
+        "before:z-10",
         // 使用 ::before 的边框模拟 outline，因为 outline 会被子元素挡住
-        _before: {
-          border: '2px dashed',
-          borderColor: 'primary',
-        },
-        // toolbar
-        '> div': {
-          display: 'block',
-        },
-      }}
+        "hover:before:border-2 hover:before:border-dashed hover:before:border-primary",
+        // 选中时显示边框
+        selected ? 'before:border-primary' : 'before:border-transparent',
+        // hover 显示工具栏
+        "[&>div]:hover:!block",
+      ].join(' ')}
       {...props}
     >
       <div>
         {children}
       </div>
       {deletable && <Toolbar selected={selected}>
-        <Box as="a" color="white" _hover={{color: 'white'}} href="#" onClick={onDelete}>删除</Box>
+        <a className="text-white hover:text-white" href="#" onClick={onDelete}>删除</a>
       </Toolbar>}
-    </Box>
+    </div>
   );
 };
 
@@ -78,7 +60,7 @@ PreviewItem.propTypes = {
   children: PropTypes.node,
 };
 
-const EditorPreviewDragContainer = ({onDragEnd, children}) => {
+const EditorPreviewDragContainer = ({ onDragEnd, children }) => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId="list">
@@ -98,7 +80,7 @@ EditorPreviewDragContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const EditorPreviewDraggable = ({draggableId, index, children}) => {
+const EditorPreviewDraggable = ({ draggableId, index, children }) => {
   return (
     <Draggable draggableId={draggableId} index={index}>
       {provided => (
@@ -145,9 +127,9 @@ const EditorPreviewPanel = (
   };
 
   return (
-    <Box w={375} h={600} overflowY="auto" border="1px solid" borderColor="gray.100" boxShadow="sm">
+    <div className="w-[375px] h-[600px] overflow-y-auto border border-gray-100 shadow-sm">
       <EditorPreviewDragContainer onDragEnd={onDragEnd}>
-        {fields.map(({key, name}, index) => {
+        {fields.map(({ key, name }, index) => {
           // 删除时，pageComponents 还未更新，忽略不存在的值
           const pageComponent = pageComponents[name];
           if (!pageComponent) {
@@ -166,7 +148,7 @@ const EditorPreviewPanel = (
             Wrapper = Fragment;
           } else {
             Wrapper = EditorPreviewDraggable;
-            wrapperProps = {index, draggableId: key.toString()};
+            wrapperProps = { index, draggableId: key.toString() };
           }
 
           return (
@@ -189,7 +171,7 @@ const EditorPreviewPanel = (
           );
         })}
       </EditorPreviewDragContainer>
-    </Box>
+    </div>
   );
 };
 

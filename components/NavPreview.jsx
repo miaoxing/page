@@ -1,23 +1,20 @@
 import PropTypes from 'prop-types';
-import { Box, Image } from '@mxjs/a-box';
 import defaultImage from '../images/default-nav.svg';
 
-const NavPreview = ({style = {}, rowNum = 4, items = []}) => {
+const NavPreview = ({ style = {}, rowNum = 4, items = [] }) => {
   const width = (100 / rowNum) + '%';
 
   return (
-    <Box display="flex" flexWrap="wrap" style={{
-      ...style,
-    }}>
+    <div className="flex flex-wrap" style={style}>
       {items.map((item, i) => {
         return (
-          <Box key={i} textAlign="center" my="10px" w={width}>
-            <Image bg="gray.200" width="48px" height="48px" src={item.image || defaultImage}/>
+          <div key={i} className="text-center my-[10px]" style={{ width }}>
+            <img className="bg-gray-200 w-12 h-12" src={item.image || defaultImage} alt={item.title}/>
             <div>{item.title}</div>
-          </Box>
+          </div>
         );
       })}
-    </Box>
+    </div>
   );
 };
 

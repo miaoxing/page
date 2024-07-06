@@ -47,7 +47,6 @@
     "@mxjs/a-link-picker": "miaoxing/mxjs-a-link-picker",
     "@mxjs/a-page": "miaoxing/mxjs-a-page",
     "@mxjs/app": "miaoxing/mxjs-app",
-    "@mxjs/a-box": "miaoxing/mxjs-a-box",
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",
     "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",

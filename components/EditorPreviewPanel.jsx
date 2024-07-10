@@ -2,10 +2,17 @@ import { Fragment, useEffect, useRef } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { useForm } from '@mxjs/a-form';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 const Toolbar = ({ selected, children, ...rest }) => {
   return (
-    <div hidden={!selected} className="absolute right-0 top-0 z-10 px-1 bg-black/50 text-xs"  {...rest}>
+    <div
+      className={clsx('group-hover:block absolute right-0 top-0 z-10 px-1 bg-black/50 text-xs', {
+        'block': selected,
+        'hidden': !selected,
+      })}
+      {...rest}
+    >
       {children}
     </div>
   );
@@ -30,7 +37,7 @@ const PreviewItem = ({ selected = false, deletable = true, isNew = false, onDele
       ref={ref}
       className={[
         "relative select-none cursor-pointer",
-        "before:content-[''] before:absolute before:inset-0 before:border-2 before:border-dashed",
+        "before:absolute before:inset-0 before:border-2 before:border-dashed",
         // 如果内容有图片，显示在图片上面
         "before:z-10",
         // 使用 ::before 的边框模拟 outline，因为 outline 会被子元素挡住
@@ -38,7 +45,7 @@ const PreviewItem = ({ selected = false, deletable = true, isNew = false, onDele
         // 选中时显示边框
         selected ? 'before:border-primary' : 'before:border-transparent',
         // hover 显示工具栏
-        "[&>div]:hover:!block",
+        "group",
       ].join(' ')}
       {...props}
     >

@@ -9,7 +9,7 @@ const NavPreview = ({ style = {}, rowNum = 4, items = [] }) => {
       {items.map((item, i) => {
         return (
           <div key={i} className="text-center my-[10px]" style={{ width }}>
-            <img className="bg-gray-200 w-12 h-12" src={item.image || defaultImage} alt={item.title}/>
+            <img className="inline bg-gray-200 w-12 h-12" src={item.image || defaultImage} alt={item.title}/>
             <div>{item.title}</div>
           </div>
         );

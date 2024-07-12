@@ -44,5 +44,10 @@
       "miaoxing/link-to": "miaoxing/link-to as 0.1.x-dev",
       "wei/wei": "twinh/wei as 0.17.x-dev"
     }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "@php wei g:auto-completion"
+    ]
   }
 }

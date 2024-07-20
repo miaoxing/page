@@ -25,8 +25,10 @@ const PagePicker = ({pickerRef, linkPicker, value}) => {
     title="选择页面"
     open={open}
     width={800}
-    bodyStyle={{
-      padding: '1rem',
+    styles={{
+      body: {
+        padding: '1rem',
+      }
     }}
     onOk={() => {
       if (id) {

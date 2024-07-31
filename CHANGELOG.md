@@ -1,3 +1,35 @@
+## [0.6.3](https://github.com/miaoxing/page/compare/v0.6.2...v0.6.3) (2024-07-31)
+
+
+### Features
+
+* Box 组件改为 tailwind 类名 ([8404058](https://github.com/miaoxing/page/commit/8404058a5474e6ab99a271ebed77853a540f8891))
+* 升级 antd `Modal` 的 `bodyStyle` 为 `styles` ([d6bd1b4](https://github.com/miaoxing/page/commit/d6bd1b46eef265d74b6447f7297db40d736ff5d8))
+* **page, experimental:** 导出 `ConfigItem` 供外部使用 ([280f601](https://github.com/miaoxing/page/commit/280f601be1f3c636563fdba3e47bc5839d5b4909))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/cur-url:** upgrade from `1.0.13` to `1.0.14`
+* **@mxjs/a-color-picker:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-input:** upgrade from `1.5.1` to `1.5.2`
+* **@mxjs/a-ueditor:** upgrade from `1.1.5` to `1.1.6`
+* **@miaoxing/dev:** upgrade from `9.1.1` to `9.1.2`
+* **@mxjs/a-clink:** upgrade from `3.0.1` to `3.0.2`
+* **@mxjs/a-form:** upgrade from `3.0.2` to `4.0.0`
+* **@mxjs/a-page:** upgrade from `3.0.1` to `4.0.0`
+* **@mxjs/a-table:** upgrade from `1.9.0` to `2.0.0`
+* **@mxjs/api:** upgrade from `1.1.0` to `1.1.1`
+* **@mxjs/app:** upgrade from `0.8.0` to `0.8.1`
+* **@mxjs/test:** upgrade from `2.0.0` to `2.0.1`
+* **miaoxing:** upgrade from `0.4.15` to `0.4.16`
+* **@miaoxing/admin:** upgrade from `0.13.2` to `0.14.0`
+* **@miaoxing/app:** upgrade from `0.10.1` to `0.10.2`
+* **@miaoxing/link-to:** upgrade from `0.1.54` to `0.1.55`
+
 ## [0.6.2](https://github.com/miaoxing/page/compare/v0.6.1...v0.6.2) (2024-06-30)
 
 

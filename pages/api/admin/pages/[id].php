@@ -9,7 +9,7 @@ use Wei\V;
 return new /**
  * @mixin \ObjectReqMixin
  */
-class () extends BasePage {
+class extends BasePage {
     use ItemTrait;
 
     protected $include = [

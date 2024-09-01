@@ -1,3 +1,35 @@
+## [0.6.6](https://github.com/miaoxing/page/compare/v0.6.5...v0.6.6) (2024-09-01)
+
+
+### Features
+
+* modal 样式优化 ([f721c88](https://github.com/miaoxing/page/commit/f721c88c6d5cf771d438f0ec688f93ef6f680005))
+* 插件增加 wei 命令行入口 ([56c2c7f](https://github.com/miaoxing/page/commit/56c2c7fed553c466ce5a9203f8ad2e8d5bcb8e13))
+* 更新 `antd` 到 `~5.19` ([7fe41e7](https://github.com/miaoxing/page/commit/7fe41e7d87e6a238c9da35e61527bace24fb13ae))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/cur-url:** upgrade from `1.0.16` to `1.0.17`
+* **@mxjs/a-color-picker:** upgrade from `1.1.3` to `1.1.4`
+* **@mxjs/a-input:** upgrade from `1.5.3` to `1.6.0`
+* **@mxjs/a-ueditor:** upgrade from `1.1.8` to `1.1.9`
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+* **@mxjs/a-clink:** upgrade from `3.0.4` to `3.0.5`
+* **@mxjs/a-form:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-page:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-table:** upgrade from `2.0.2` to `2.1.0`
+* **@mxjs/api:** upgrade from `1.1.3` to `1.1.4`
+* **@mxjs/app:** upgrade from `0.8.2` to `0.8.3`
+* **@mxjs/test:** upgrade from `2.0.3` to `2.0.4`
+* **miaoxing:** upgrade from `0.4.18` to `0.4.19`
+* **@miaoxing/admin:** upgrade from `0.15.1` to `0.15.2`
+* **@miaoxing/app:** upgrade from `0.10.3` to `0.10.4`
+* **@miaoxing/link-to:** upgrade from `0.1.56` to `0.1.57`
+
 ## [0.6.5](https://github.com/miaoxing/page/compare/v0.6.4...v0.6.5) (2024-08-03)
 
 

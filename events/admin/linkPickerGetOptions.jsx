@@ -1,12 +1,13 @@
-import {useEffect, useState} from 'react';
-import {Button, Modal} from 'antd';
-import {Table, TableProvider, useTable} from '@mxjs/a-table';
-import {SearchForm, SearchItem} from '@mxjs/a-form';
-import {PageActions} from '@mxjs/a-page';
+import { useState } from 'react';
+import { Button, Modal } from 'antd';
+import { Table, TableProvider, useTable } from '@mxjs/a-table';
+import { SearchForm, SearchItem } from '@mxjs/a-form';
+import { PageActions } from '@mxjs/a-page';
 import Icon from '@mxjs/icons';
 import $ from 'miaoxing';
 import PropTypes from 'prop-types';
-import {NewBtn} from '@mxjs/a-button';
+import { NewBtn } from '@mxjs/a-button';
+import { useQuery } from '@mxjs/query';
 
 const PagePicker = ({pickerRef, linkPicker, value}) => {
   const [table] = useTable();
@@ -90,18 +91,8 @@ PagePicker.propTypes = {
 };
 
 const PagePickerLabel = ({value, extra}) => {
-  const [name, setName] = useState('');
-
-  useEffect(() => {
-    if (!extra.name) {
-      (async () => {
-        const {ret} = await $.get('pages/' + value.id);
-        setName(ret.data.name);
-      })();
-    }
-  }, [value.id, extra]);
-
-  return extra.name || name;
+  const { data = {} } = useQuery(!extra.name ? 'pages/' + value.id : null);
+  return extra.name || data.name;
 };
 
 export default [

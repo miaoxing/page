@@ -5,8 +5,8 @@ import {Tag} from 'antd';
 import $ from 'miaoxing';
 
 const types = {
-  1: <Tag color="blue">独立页面</Tag>,
-  2: <Tag color="orange">首页</Tag>,
+  1: <Tag color="blue" bordered={false}>独立页面</Tag>,
+  2: <Tag color="orange" bordered={false}>首页</Tag>,
 };
 
 const Index = () => {

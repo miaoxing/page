@@ -96,7 +96,7 @@ const New = () => {
           }
           return curUrl.index();
         }}
-        afterLoad={async ({ret}) => {
+        afterLoad={async (ret) => {
           await loadedComponents.current;
 
           if (!ret.data.components) {

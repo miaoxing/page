@@ -1,3 +1,18 @@
+## [0.6.9](https://github.com/miaoxing/page/compare/v0.6.8...v0.6.9) (2024-11-03)
+
+
+### Bug Fixes
+
+* 更新 `afterLoad` 的参数 ([d939fc9](https://github.com/miaoxing/page/commit/d939fc92f10e700c16fed313c53ee0daad054b74))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/admin:** upgrade from `0.16.1` to `0.16.2`
+
 ## [0.6.8](https://github.com/miaoxing/page/compare/v0.6.7...v0.6.8) (2024-11-01)
 
 

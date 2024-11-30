@@ -1,3 +1,19 @@
+## [0.6.10](https://github.com/miaoxing/page/compare/v0.6.9...v0.6.10) (2024-11-30)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-ueditor:** upgrade from `1.1.11` to `1.1.12`
+* **@mxjs/a-form:** upgrade from `5.0.0` to `5.1.0`
+* **@mxjs/a-page:** upgrade from `4.2.1` to `4.3.0`
+* **@mxjs/a-table:** upgrade from `2.2.1` to `2.3.0`
+* **@miaoxing/admin:** upgrade from `0.16.2` to `0.16.3`
+* **@miaoxing/app:** upgrade from `0.10.6` to `0.10.7`
+* **@miaoxing/link-to:** upgrade from `0.1.59` to `0.1.60`
+
 ## [0.6.9](https://github.com/miaoxing/page/compare/v0.6.8...v0.6.9) (2024-11-03)
 
 

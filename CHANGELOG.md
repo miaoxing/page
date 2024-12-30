@@ -1,3 +1,33 @@
+## [0.6.11](https://github.com/miaoxing/page/compare/v0.6.10...v0.6.11) (2024-12-30)
+
+
+### Bug Fixes
+
+* 限制 react 版本低于 19，避免测试失败 ([47979a9](https://github.com/miaoxing/page/commit/47979a98133c51727f505f7e8f229b3198d24027))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/cur-url:** upgrade from `1.0.18` to `2.0.0`
+* **@mxjs/a-color-picker:** upgrade from `1.1.4` to `1.1.5`
+* **@mxjs/a-input:** upgrade from `1.6.0` to `1.6.1`
+* **@mxjs/a-ueditor:** upgrade from `1.1.12` to `1.1.13`
+* **@miaoxing/dev:** upgrade from `9.2.0` to `9.3.0`
+* **@mxjs/a-clink:** upgrade from `3.0.7` to `3.0.8`
+* **@mxjs/a-form:** upgrade from `5.1.0` to `5.2.0`
+* **@mxjs/a-page:** upgrade from `4.3.0` to `4.3.1`
+* **@mxjs/a-table:** upgrade from `2.3.0` to `2.4.0`
+* **@mxjs/api:** upgrade from `1.1.5` to `1.1.6`
+* **@mxjs/app:** upgrade from `0.8.4` to `0.8.5`
+* **@mxjs/test:** upgrade from `2.0.5` to `2.0.6`
+* **miaoxing:** upgrade from `0.4.19` to `0.4.20`
+* **@miaoxing/admin:** upgrade from `0.16.3` to `0.17.0`
+* **@miaoxing/app:** upgrade from `0.10.7` to `0.10.8`
+* **@miaoxing/link-to:** upgrade from `0.1.60` to `0.1.61`
+
 ## [0.6.10](https://github.com/miaoxing/page/compare/v0.6.9...v0.6.10) (2024-11-30)
 
 

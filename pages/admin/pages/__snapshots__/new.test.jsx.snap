@@ -7,7 +7,7 @@ exports[`admin/page flow 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/page/defaults",
+        "url": "page/defaults",
       },
     ],
   ],
@@ -30,7 +30,7 @@ exports[`admin/page flow 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/page/defaults",
+        "url": "page/defaults",
       },
     ],
     Array [
@@ -67,7 +67,7 @@ exports[`admin/page flow 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/api/admin/page",
+        "url": "page",
       },
     ],
   ],
@@ -97,7 +97,7 @@ exports[`admin/page form 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/page/defaults",
+        "url": "page/defaults",
       },
     ],
   ],
@@ -120,7 +120,7 @@ exports[`admin/page form 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/page/defaults",
+        "url": "page/defaults",
       },
     ],
     Array [
@@ -206,7 +206,7 @@ exports[`admin/page form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/api/admin/page",
+        "url": "page",
       },
     ],
   ],

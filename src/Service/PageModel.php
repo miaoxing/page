@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Page\Service;
 
-use Miaoxing\Page\Metadata\PageTrait;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\HasAppIdTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
@@ -11,13 +10,32 @@ use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Wei\Model\SoftDeleteTrait;
 
 /**
- * @property PageComponentModel|PageComponentModel[] $components
+ * @property string|null $id
+ * @property string $appId 应用编号
+ * @property string $name 页面名称
+ * @property int $type 页面类型。1:独立页面;2:首页
+ * @property string|null $createdAt
+ * @property string|null $updatedAt
+ * @property string $createdBy
+ * @property string $updatedBy
+ * @property string|null $deletedAt
+ * @property string $deletedBy
+ * @property PageComponentModel $components
+ * @property string|null $id
+ * @property string $appId 应用编号
+ * @property string $name 页面名称
+ * @property int $type 页面类型。1:独立页面;2:首页
+ * @property string|null $createdAt
+ * @property string|null $updatedAt
+ * @property string $createdBy
+ * @property string $updatedBy
+ * @property string|null $deletedAt
+ * @property string $deletedBy
  */
 class PageModel extends BaseModel
 {
     use HasAppIdTrait;
     use ModelTrait;
-    use PageTrait;
     use ReqQueryTrait;
     use SnowflakeTrait;
     use SoftDeleteTrait;
